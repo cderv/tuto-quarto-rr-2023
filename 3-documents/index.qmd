@@ -1,0 +1,10 @@
+---
+title: "Produire simplement des documents de qualité"
+---
+
+## Slides
+
+{{< fa tv >}} [Ouvrir les slides en plein écran]()
+
+## Exercices
+

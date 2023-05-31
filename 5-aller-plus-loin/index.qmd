@@ -1,0 +1,10 @@
+---
+title: "Quarto permet déjà beaucoup plus !"
+---
+
+## Slides
+
+{{< fa tv >}} [Ouvrir les slides en plein écran]()
+
+## Exercices
+

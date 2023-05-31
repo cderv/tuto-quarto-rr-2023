@@ -1,0 +1,10 @@
+---
+title: "Quarto: Une évolution de R Markdown ?"
+---
+
+## Slides
+
+{{< fa tv >}} [Ouvrir les slides en plein écran]()
+
+## Exercices
+

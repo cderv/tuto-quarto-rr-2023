@@ -1,0 +1,60 @@
+project:
+  type: website
+
+website:
+  page-navigation: true
+  title: "De R Markdown à Quarto pour aller plus loin avec ses publications"
+  description: Rencontres R 2023 tutorial sur Quarto
+
+  repo-url: https://github.com/cderv/tutorial-quarto-rr2023
+  repo-actions: [edit, issue]
+
+  open-graph: true
+  twitter-card:
+    creator: "@chrisderv"
+
+  sidebar:
+    background: "#FDC538"
+    align: center
+    tools:
+      - icon: github
+        href: https://github.com/cderv/tutorial-quarto-rr2023
+        text: "GitHub Dépot"
+
+    style: docked
+    search: true
+    collapse-level: 2
+    contents:
+      - href: index.qmd
+        text: Accueil
+      - href: preparatif.qmd
+        text: Préparatif
+      - text: ---
+      - href: 1-quarto-kesako/index.qmd
+        text: "Quarto: Késako ?"
+      - href: 2-documents/index.qmd
+        text: Produire un documents
+      - href: 3-projets/index.qmd
+        text: Travailler en projet
+      - href: 4-aller-plus-loin/index.qmd
+        text: Pour aller plus loin
+
+  page-footer:
+    right: "Site web construit et publié avec [Quarto](https://quarto.org/)."
+    left: "&copy; Copyright 2023, Christophe Dervieux"
+    background: "#FDC538"
+
+lang: fr
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+    mainfont: "Atkinson Hyperlegible"
+
+execute:
+  freeze: auto
+
+editor: visual

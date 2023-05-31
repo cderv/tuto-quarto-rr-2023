@@ -1,0 +1,10 @@
+---
+title: "Comment passer de R Markdown à Quarto ?"
+---
+
+## Slides
+
+{{< fa tv >}} [Ouvrir les slides en plein écran]()
+
+## Exercices
+
