@@ -1,0 +1,246 @@
+---
+title: "Quarto: Késako ?"
+subtitle: "De R Markdown à Quarto pour aller plus loin avec ses publications"
+institute: "Posit"
+author: "Christophe Dervieux"
+date: "2023-06-21"
+footer: "[🔗 cderv.quarto.pub/tuto-quarto-rr-2023]()"
+format:
+  clean-revealjs:
+    theme: [default, ../reveal-style.scss]
+    transition: fade
+    chalkboard: true
+editor: visual
+execute:
+  freeze: auto
+  echo: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+options(width = 65)
+
+library(countdown)
+```
+
+# Préparatif
+
+## Soyez prêt ! {.smaller}
+
+{{< include ../_preparatif.qmd >}}
+
+# Bienvenue
+
+## Informations
+
+* {{< fa wifi >}} TODO
+* {{< fa person-running >}} TODO
+* {{< fa restroom >}} TODO
+
+## Code de Conduite {.smaller}
+
+> Les organisateurs des Rencontres R 2023 s'engagent à offrir une expérience de conférence sans harcèlement pour tous, quel que soit l'âge, le sexe, l'orientation sexuelle, le handicap, l'apparence physique, la race ou la religion (ou son absence).
+
+```{r}
+#| echo: false
+knitr::include_url("https://rr2023.sciencesconf.org/resource/page/id/10#template_content", height = "300px")
+```
+
+::: aside
+A consulter sur: <https://rr2023.sciencesconf.org/resource/page/id/10>
+:::
+
+## Présent pour vous aider
+
+-   **Instructeur:** Christophe Dervieux
+
+    -   Développeur Logiciel Open-Source à Posit
+    -   Ecosystème R Markdown et Membre de l'équipe de développement Quarto
+
+-   **TA:** Maëlle Salmon
+
+    -   TODO
+
+-   **Les deux:** Développeur R depuis plusieurs années, utilisateurs R Markdown et Quarto avancée
+
+## Rencontrez vos voisins
+
+::: {.callout}
+Prenez un peu de temps pour voir qui va pouvoir vous aidez à coté de vous!
+:::
+
+```{r}
+#| echo: false
+countdown(minutes = 1)
+```
+
+## Comment cela va se passer ?
+
+- Des parties présentations
+
+- Des démo en direct que vous pouvez suivre aussi
+
+- Des exercices à faire vous même
+
+### Obtenir de l'aide
+
+- Pendant les parties non exercices - levez la main {{< fa hand >}}
+
+- Pendant les exercies -- {{< fa hand >}}, mais utilisez aussi les autocollants pour vous signaler :
+
+    - Rose : J'ai besoin d'aide
+    - Vert : J'ai terminé
+
+## 
+
+::: columns
+::: {.column width="50%"}
+::: {.fragment .fade-in-then-semi-out}
+Je vais **supposer** que vous
+
+- connaissez R et R Markdown
+
+- avez travaillé avec RStudio
+
+- voulez en savoir plus sur Quarto
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment .fade-in}
+Je vais vous **apprendre**
+
+- Syntaxe et formats Quarto
+
+- Evolution par rapport à R Markdown
+
+- Comment s'y retrouver.
+:::
+:::
+:::
+
+# Alors, Quarto: c'est quoi ?
+
+## Quarto ... {.smaller}
+
+- est un nouveau système de publication scientifique et technique Open-Source, basé sur Pandoc,
+- est pensé et construit sur les +10ans d'expérience avec R Markdown,
+- ne demande pas une technologie particulière pour s'installer et fonctionner.
+
+![Illustration de la présentation "Hello, Quarto" par Julia Lowndes et Mine Çetinkaya-Rundel, présentée à la conférence RStudio 2022. Illustré par Allison Horst.](images/horst_quarto_schematic.png){fig-alt="Un schéma représentant la polyvalence de Quarto en matière d'entrée multilingue (par exemple Python, R, Observable, Julia) et de sortie multiformat (par exemple PDF, html, documents Word, et plus encore)." fig-align="center"}
+
+## Comme R Markdown alors ? 
+
+* {{< fa box >}} knitr -> 2011
+* {{< fa box >}} rmarkdown -> 2014
+
+![](images/rmd-knitr.png){fig-alt="Un diagramme de la façon dont un .Rmd est transformé en formats de sortie via knitr et pandoc"}
+
+## Comme R Markdown alors ? 
+
+Oui construit sur une 10ans de knitr + rmarkdown -> Même principe... 
+
+![](images/qmd-knitr.jpeg){fig-alt="Un diagramme de la façon dont un .qmd est transformé en formats de sortie via knitr et pandoc"}
+
+## Comme R Markdown alors ? 
+
+...mais Quarto ouvre aussi de nouveaux horizons!
+
+![](images/jupyter-alone.jpeg){fig-alt="Un diagramme de la façon dont un .qmd est transformé en formats de sortie via jupyter et pandoc"}
+
+## Quarto ... {.center auto-animate="true"}
+
+**unifie** + **étend** l'écosystème R Markdown
+
+## Quarto ... {.center auto-animate="true"}
+
+**unifie** + **étend** l'écosystème R Markdown
+
+<br>
+
+**unifie** pour ceux qui aiment R Markdown
+
+## Quarto ... {.center auto-animate="true"}
+
+**unifie** + **étend** l'écosystème R Markdown
+
+<br>
+
+**unifie** pour ceux qui aiment R Markdown
+
+**étend** pour les personnes qui ne connaissent pas R Markdown
+
+## Quarto unifie + étend R Markdown
+
+::: incremental
+- Implémentation cohérente de fonctionnalités pour les différents formats de sorties : tabsets, code-folding, syntax highlighting, etc. 
+- Des valeurs par défaut plus accessibles et une meilleure prise en charge de l'accessibilité
+- Support d'autres langages comme Python, Julia, Observable, et plus encore via le moteur Jupyter pour les chunks de code exécutables.
+- De nouvelles fonctionnalités pour une meilleure expérience: auto-complétion YAML, informations sur les erreurs de syntaxe YAML, etc.
+:::
+
+## Et plus concrêtement ? {.smaller}
+
+Quarto est une interface de ligne de commande (CLI) qui rend les formats de texte brut (`.qmd`, `.rmd`, `.md`) OU les formats mixtes (`.ipynb`/Jupyter notebook) en rapports statiques PDF/Word/HTML, livres, sites web, présentations et plus encore.
+
+```{.bash code-line-numbers="|1|4|12|17|18"}
+$ quarto --help
+
+  Usage:   quarto
+  Version: 1.3.361
+
+  Description:
+
+    Quarto CLI
+
+  Options:
+
+    -h, --help     - Show this help.
+    -V, --version  - Show the version number for this program.
+
+  Commands:
+
+    render          [input] [args...]     - Render files or projects to various document types.
+    preview         [file] [args...]      - Render and preview a document or website project.
+    serve           [input]               - Serve a Shiny interactive document.
+    create          [type] [commands...]  - Create a Quarto project or extension
+    create-project  [dir]                 - Create a project for rendering multiple documents
+    convert         <input>               - Convert documents to alternate representations.
+    pandoc          [args...]             - Run the version of Pandoc embedded within Quarto.
+    run             [script] [args...]    - Run a TypeScript, R, Python, or Lua script.
+    add             <extension>           - Add an extension to this folder or project
+    install         [target...]           - Installs an extension or global dependency.
+    publish         [provider] [path]     - Publish a document or project. Available providers include:
+    check           [target]              - Verify correct functioning of Quarto installation.
+    help            [command]             - Show this help or the help of a sub-command.
+```
+
+## Utilisable depuis vos outils préférés
+
+::: r-stack
+![](https://quarto.org/docs/tools/images/rstudio-preview.png){.fragment fig-alt="Capture d'écran d'un document Quarto rendu dans RStudio" width="1200"}
+
+![](https://quarto.org/docs/tools/images/jupyterlab-preview.png){.fragment fig-alt="Capture d'écran d'un document Quarto rendu dans JupyterLab" width="1200"}
+
+![](https://quarto.org/docs/computations/images/python-vscode.png){.fragment fig-alt="Capture d'écran d'un document Quarto rendu à l'intérieur de VSCode" width="1200"}
+:::
+
+## Testons tout ça ! 
+
+```{r}
+#| echo: false
+countdown(minutes = 5)
+```
+
+::: {.callout}
+
+# A faire ensemble
+
+1. Ouvrir RStudio 
+2. Se placer dans un dossier vierge (ou où vous souhaitez)
+3. Créer un nouveau document Quarto
+4. Cliquer sur "Render"
+5. Ouvrir le visual editor
+:::
