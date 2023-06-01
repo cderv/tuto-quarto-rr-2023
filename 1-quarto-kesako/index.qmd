@@ -4,7 +4,11 @@ title: "Quarto: Une évolution de R Markdown ?"
 
 ## Slides
 
-{{< fa tv >}} [Ouvrir les slides en plein écran]()
+{{< fa tv >}} [Ouvrir les slides en plein écran](1-quarto-kesako.html)
+
+```{=html}
+<iframe class="slide-deck" src="1-quarto-kesako.html" height="420" width="747" style="border: 1px solid #123233;"></iframe>
+```
 
 ## Exercices
 
