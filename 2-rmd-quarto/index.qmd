@@ -1,10 +1,13 @@
 ---
-title: "Comment passer de R Markdown à Quarto ?"
+title: "Comment passer de rmarkdown à quarto ?"
 ---
 
 ## Slides
 
-{{< fa tv >}} [Ouvrir les slides en plein écran]()
+{{< fa tv >}} [Ouvrir les slides en plein écran](2-rmd-quarto.html)
+
+```{=html}
+<iframe class="slide-deck" src="2-rmd-quarto.html" height="420" width="747" style="border: 1px solid #123233;"></iframe>
+```
 
 ## Exercices
-

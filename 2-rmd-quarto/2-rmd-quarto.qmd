@@ -1,0 +1,202 @@
+---
+title: "Passer de rmarkdown à quarto"
+subtitle: "De R Markdown à Quarto pour aller plus loin avec ses publications"
+institute: "Posit"
+author: "Christophe Dervieux"
+date: "2023-06-21"
+footer: "[🔗 cderv.quarto.pub/tuto-quarto-rr-2023]()"
+format:
+  clean-revealjs:
+    theme: [default, ../reveal-style.scss]
+    transition: fade
+    chalkboard: true
+revealjs-plugins:
+  - attribution
+editor: visual
+execute:
+  freeze: auto
+  echo: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+options(width = 65)
+
+library(countdown)
+```
+
+## Démarrer avec Quarto ! 
+
+::: callout
+
+# Faisons ensemble ! 
+
+Creer un projet Quarto depuis RStudio et produire un HTML. 
+:::
+
+::: {.panel-tabset}
+
+## RStudio IDE
+
+File > New Project...
+
+![](images/rstudio-new-project-quarto.png){.absolute fig-alt="Menu création de projet Quarto depuis RStudio IDE" top=300 left=400 width="450"}
+
+## Quarto CLI
+
+```powershell
+$ quarto create project
+ ? Type » default
+ ? Directory » quarto-101
+Creating project at C:\Users\chris\AppData\Local\Temp\quarto-101:
+  - Created _quarto.yml
+  - Created Quarto-101.qmd
+```
+:::
+
+## Explorons...
+
+```powershell
+quarto-101
++¦¦ Quarto-101.qmd
+L¦¦ _quarto.yml
+```
+
+</br>
+
+
+:::: columns
+
+::: column
+
+```{.yaml filename="_quarto.yml"}
+project:
+  title: "Quarto-101"
+```
+:::
+
+::: column
+
+```{.markdown filename="Quarto-101.qmd"}
+---
+title: "Quarto-101"
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+```
+:::
+::::
+
+## Produire un HTML
+
+![Nouveau bouton pour transformer son document dans RStudio IDE](images/rstudio-render-quarto.png){fig-alt="Menu de RStudio IDE dans un document .qmd"}
+
+```{.bash filename=terminal}
+quarto render Quarto-101.qmd # defaults to html
+quarto render Quarto-101.qmd --to html
+```
+
+## Produire un HTML
+
+![](images/rstudio-render-quarto-html.png){fig-alt="Capture d'écran de la fenêtre viewer de RStudio IDE après avoir générer un HTML."}
+
+## Et mes documents existants alors ? 
+
+::: fragment
+Convertir de `.Rmd` à `.qmd` ?
+:::
+
+::: fragment
+Pas nécessaire car quarto est compatible! 
+
+```{.bash filename=terminal}
+quarto render my-favorite.Rmd --to html
+```
+:::
+
+## A vous !
+
+```{r}
+#| echo: false
+countdown(minutes = 2)
+```
+
+::: callout
+
+# Ajoutons au projet
+
+1. Créer un sous-dossier dans le projet e.g `rapport`
+2. Y déposer le fichier `.Rmd` d'exercices nommé TODO tel quel 
+3. Produire un HTML
+4. Comparer le comportement entre
+   * RStudio > Render depuis la source, ou le _visual editor_
+   * le terminal avec `quarto render`
+:::
+
+::: callout-tip
+
+# Déjà fini ? 
+
+* Renommer .Rmd en .qmd et rec
+
+:::
+
+# De `.Rmd` à `.qmd`
+
+Voyons ce qui change!
+
+## YAML: l'en-tête
+
+Le "Yet Another Markup Language" ou "YAML Ain't Markup Language" est toujours utilisé pour fournir des métadonnées au niveau du document.
+
+```yaml
+---
+title: "Let's dive into palmerpinguins !"`
+subtitle: An example of report
+author: "C. Dervieux"
+date: "21/06/2023"
+format: 
+  html: 
+    toc: true
+---
+```
+
+## YAML: Chunk options
+
+```{{r}}
+#| label: bill-dims-species
+#| warning: false
+#| fig-width: 5
+#| fig-asp: 0.618
+
+ggplot(
+  penguins,
+  aes(
+    x = bill_length_mm, y = bill_depth_mm,
+    color = species, shape = species
+  )
+) +
+  geom_point() +
+  scale_color_colorblind() +
+  labs(x = "Bill length (mm)", y = "Bill depth (mm)") +
+  theme_minimal()
+```
+
+# Synthèse
+
+## Qu'en est-il de R Markdown ? {.smaller}
+
+::: incrémental
+
+- Vous pouvez rendre des documents R Markdown existants avec Quarto et vous pouvez les renommer en fichiers `.qmd` pour les transformer en documents Quarto.
+- Pas d'obligation-- R Markdown continue d'être maintenu.
+- Cependant, de nouvelles fonctionnalités sont en cours de développement pour Quarto.
+- De plus, Quarto
+    - vous permet de choisir votre propre éditeur et votre langage de préféré
+    - Il est livré avec des fonctionnalités plus riches et plus accessibles.
+    - est activement développé.
+:::
