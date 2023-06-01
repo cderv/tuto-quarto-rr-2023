@@ -32,11 +32,13 @@ website:
       - text: ---
       - href: 1-quarto-kesako/index.qmd
         text: "Quarto: Késako ?"
-      - href: 2-documents/index.qmd
-        text: Produire un documents
-      - href: 3-projets/index.qmd
+      - href: 2-rmd-quarto/index.qmd
+        text: "Passer de Rmd à Quarto"
+      - href: 3-documents/index.qmd
+        text: Produire un document
+      - href: 4-projets/index.qmd
         text: Travailler en projet
-      - href: 4-aller-plus-loin/index.qmd
+      - href: 5-aller-plus-loin/index.qmd
         text: Pour aller plus loin
 
   page-footer:
