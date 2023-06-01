@@ -5,4 +5,4 @@ subtitle: Etre prêt pour le jour J
 
 Avant le tutoriel, veuillez suivre les étapes suivantes :
 
-{{< includes _preparatif.qmd >}}
+{{< include _preparatif.qmd >}}
