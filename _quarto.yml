@@ -6,7 +6,7 @@ website:
   title: "De R Markdown à Quarto pour aller plus loin avec ses publications"
   description: Rencontres R 2023 tutorial sur Quarto
 
-  repo-url: https://github.com/cderv/tutorial-quarto-rr2023
+  repo-url: https://github.com/cderv/tuto-quarto-rr-2023
   repo-actions: [edit, issue]
 
   open-graph: true
@@ -18,7 +18,7 @@ website:
     align: center
     tools:
       - icon: github
-        href: https://github.com/cderv/tutorial-quarto-rr2023
+        href: https://github.com/cderv/tuto-quarto-rr-2023
         text: "GitHub Dépot"
 
     style: docked
