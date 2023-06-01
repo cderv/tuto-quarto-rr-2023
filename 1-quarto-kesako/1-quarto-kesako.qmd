@@ -10,6 +10,8 @@ format:
     theme: [default, ../reveal-style.scss]
     transition: fade
     chalkboard: true
+revealjs-plugins:
+  - attribution
 editor: visual
 execute:
   freeze: auto
@@ -63,7 +65,7 @@ A consulter sur: <https://rr2023.sciencesconf.org/resource/page/id/10>
 
     -   TODO
 
--   **Les deux:** Développeur R depuis plusieurs années, utilisateurs R Markdown et Quarto avancée
+-   **Les deux:** développeur·euse·s R depuis plusieurs années, utilisateur·rice·s R Markdown et Quarto avancé·e·s
 
 ## Rencontrez vos voisins
 
@@ -71,9 +73,15 @@ A consulter sur: <https://rr2023.sciencesconf.org/resource/page/id/10>
 Prenez un peu de temps pour voir qui va pouvoir vous aidez à coté de vous!
 :::
 
+{{< fa lightbulb >}} Pour vous aider:
+
+* Bonjour, moi c'est ... et toi ? 
+* Depuis combien de temps connaissez vous R / R Markdown ? 
+* Est ce que vous avez déja utilisé Quarto ?
+
 ```{r}
 #| echo: false
-countdown(minutes = 1)
+countdown(seconds = 30)
 ```
 
 ## Comment cela va se passer ?
@@ -100,11 +108,11 @@ countdown(minutes = 1)
 ::: {.fragment .fade-in-then-semi-out}
 Je vais **supposer** que vous
 
-- connaissez R et R Markdown
+- connaissez R Markdown avec **knitr** et la syntaxe Markdown,
 
-- avez travaillé avec RStudio
+- avez travaillé avec RStudio,
 
-- voulez en savoir plus sur Quarto
+- voulez en savoir plus sur Quarto.
 :::
 :::
 
@@ -112,9 +120,9 @@ Je vais **supposer** que vous
 ::: {.fragment .fade-in}
 Je vais vous **apprendre**
 
-- Syntaxe et formats Quarto
+- Syntaxe et formats Quarto,
 
-- Evolution par rapport à R Markdown
+- Evolution par rapport à R Markdown,
 
 - Comment s'y retrouver.
 :::
@@ -180,6 +188,22 @@ Oui construit sur une 10ans de knitr + rmarkdown -> Même principe...
 - Support d'autres langages comme Python, Julia, Observable, et plus encore via le moteur Jupyter pour les chunks de code exécutables.
 - De nouvelles fonctionnalités pour une meilleure expérience: auto-complétion YAML, informations sur les erreurs de syntaxe YAML, etc.
 :::
+
+## Quarto unifie + étend R Markdown
+
+::: {.callout-important}
+
+# **rmarkdown** ne disparait pas ! 
+
+L'écosystème R Markdown continue d'exister. Pas de _deprecation_ en vue. 
+:::
+
+![](images/knitting-hedgehog.png){fig-alt='A round hedgehog in a yellow beanie, knitting a teal scarf. Behind them are different outputs from "knitting" documents in R, including PDF, Word, LaTeX, html5, slides, eBooks, dashboards, and websites.'}
+
+::: {.attribution}
+Illustration by Alison Hill and Allison Horst, for RStudio.
+:::
+
 
 ## Et plus concrêtement ? {.smaller}
 

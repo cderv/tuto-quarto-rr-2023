@@ -38,8 +38,10 @@ website:
         text: Produire un document
       - href: 4-projets/index.qmd
         text: Travailler en projet
-      - href: 5-aller-plus-loin/index.qmd
-        text: Pour aller plus loin
+      - href: 5-synthese/index.qmd
+        text: Synthèse
+      - href: 6-aller-plus-loin/index.qmd
+        text: Pour aller plus loin...
 
   page-footer:
     right: "Site web construit et publié avec [Quarto](https://quarto.org/)."

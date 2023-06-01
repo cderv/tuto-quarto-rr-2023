@@ -5,4 +5,20 @@ subtitle: Etre prêt pour le jour J
 
 Avant le tutoriel, veuillez suivre les étapes suivantes :
 
+## Avant de venir
+
 {{< include _preparatif.qmd >}}
+
+## A connaître (ou réviser) pour être à l'aise
+
+Hypothèse pour le tutoriel: Vous connaissez R Markdown et vous connaissez la syntax Markdown.
+
+-   La syntaxe Markdown pour Pandoc
+    -   C'est la même que R Markdown: <https://bookdown.org/yihui/rmarkdown/markdown-syntax.html>
+
+    -   Elle est rappelé aussi pour Quarto: <https://quarto.org/docs/authoring/markdown-basics.html>
+
+-   Inclure du code R avec **knitr**
+    -   Les chunks de code R: <https://bookdown.org/yihui/rmarkdown/r-code.html>
+
+    -   C\'est quoi un fichier R Markdown en fait: <https://bookdown.org/yihui/rmarkdown-cookbook/rmarkdown-anatomy.html>
