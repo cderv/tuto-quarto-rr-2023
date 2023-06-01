@@ -29,7 +29,7 @@ library(countdown)
 
 # Préparatif
 
-## Soyez prêt ! {.smaller}
+## Soyez prêt·e ! {.smaller}
 
 {{< include ../_preparatif.qmd >}}
 
@@ -67,7 +67,7 @@ A consulter sur: <https://rr2023.sciencesconf.org/resource/page/id/10>
 
 -   **Les deux:** développeur·euse·s R depuis plusieurs années, utilisateur·rice·s R Markdown et Quarto avancé·e·s
 
-## Rencontrez vos voisins
+## Rencontrez vos voisin·e·s
 
 ::: {.callout}
 Prenez un peu de temps pour voir qui va pouvoir vous aidez à coté de vous!
@@ -204,8 +204,7 @@ L'écosystème R Markdown continue d'exister. Pas de _deprecation_ en vue.
 Illustration by Alison Hill and Allison Horst, for RStudio.
 :::
 
-
-## Et plus concrêtement ? {.smaller}
+## Et plus concrètement ? {.smaller}
 
 Quarto est une interface de ligne de commande (CLI) qui rend les formats de texte brut (`.qmd`, `.rmd`, `.md`) OU les formats mixtes (`.ipynb`/Jupyter notebook) en rapports statiques PDF/Word/HTML, livres, sites web, présentations et plus encore.
 
