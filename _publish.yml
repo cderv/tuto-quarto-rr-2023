@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: 42420560-7017-4506-99df-fd99be7d56d4
+      url: 'https://reliable-macaron-af9bcd.netlify.app'
