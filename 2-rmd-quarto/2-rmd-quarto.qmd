@@ -27,26 +27,24 @@ options(width = 65)
 library(countdown)
 ```
 
-## Démarrer avec Quarto ! 
+## Démarrer avec Quarto !
 
 ::: callout
+# Faisons ensemble !
 
-# Faisons ensemble ! 
-
-Creer un projet Quarto depuis RStudio et produire un HTML. 
+Creer un projet Quarto depuis RStudio et produire un HTML.
 :::
 
-::: {.panel-tabset}
-
+::: panel-tabset
 ## RStudio IDE
 
-File > New Project...
+File \> New Project...
 
-![](images/rstudio-new-project-quarto.png){.absolute fig-alt="Menu création de projet Quarto depuis RStudio IDE" top=300 left=400 width="450"}
+![](images/rstudio-new-project-quarto.png){.absolute fig-alt="Menu création de projet Quarto depuis RStudio IDE" top="320" left="400" width="450"}
 
 ## Quarto CLI
 
-```powershell
+``` powershell
 $ quarto create project
  ? Type » default
  ? Directory » quarto-101
@@ -58,7 +56,7 @@ Creating project at C:\Users\chris\AppData\Local\Temp\quarto-101:
 
 ## Explorons...
 
-```powershell
+``` powershell
 quarto-101
 +¦¦ Quarto-101.qmd
 L¦¦ _quarto.yml
@@ -66,20 +64,16 @@ L¦¦ _quarto.yml
 
 </br>
 
-
-:::: columns
-
+::: columns
 ::: column
-
-```{.yaml filename="_quarto.yml"}
+``` {.yaml filename="_quarto.yml"}
 project:
   title: "Quarto-101"
 ```
 :::
 
 ::: column
-
-```{.markdown filename="Quarto-101.qmd"}
+``` {.markdown filename="Quarto-101.qmd"}
 ---
 title: "Quarto-101"
 ---
@@ -89,13 +83,13 @@ title: "Quarto-101"
 Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
 ```
 :::
-::::
+:::
 
 ## Produire un HTML
 
 ![Nouveau bouton pour transformer son document dans RStudio IDE](images/rstudio-render-quarto.png){fig-alt="Menu de RStudio IDE dans un document .qmd"}
 
-```{.bash filename=terminal}
+``` {.bash filename="terminal"}
 quarto render Quarto-101.qmd # defaults to html
 quarto render Quarto-101.qmd --to html
 ```
@@ -104,16 +98,16 @@ quarto render Quarto-101.qmd --to html
 
 ![](images/rstudio-render-quarto-html.png){fig-alt="Capture d'écran de la fenêtre viewer de RStudio IDE après avoir générer un HTML."}
 
-## Et mes documents existants alors ? 
+## Et mes documents existants alors ?
 
 ::: fragment
 Convertir de `.Rmd` à `.qmd` ?
 :::
 
 ::: fragment
-Pas nécessaire car quarto est compatible! 
+Pas nécessaire car quarto est compatible!
 
-```{.bash filename=terminal}
+``` {.bash filename="terminal"}
 quarto render my-favorite.Rmd --to html
 ```
 :::
@@ -126,23 +120,14 @@ countdown(minutes = 2)
 ```
 
 ::: callout
-
 # Ajoutons au projet
 
-1. Créer un sous-dossier dans le projet e.g `rapport`
-2. Y déposer le fichier `.Rmd` d'exercices nommé TODO tel quel 
-3. Produire un HTML
-4. Comparer le comportement entre
-   * RStudio > Render depuis la source, ou le _visual editor_
-   * le terminal avec `quarto render`
-:::
-
-::: callout-tip
-
-# Déjà fini ? 
-
-* Renommer .Rmd en .qmd et rec
-
+1.  Créer un sous-dossier dans le projet e.g `rapport`
+2.  Y déposer le fichier `.Rmd` d'exercices nommé TODO tel quel
+3.  Produire un HTML
+4.  Comparer le comportement entre
+    -   RStudio \> Render depuis la source, ou le *visual editor*
+    -   le terminal avec `quarto render`
 :::
 
 # De `.Rmd` à `.qmd`
@@ -153,7 +138,7 @@ Voyons ce qui change!
 
 Le "Yet Another Markup Language" ou "YAML Ain't Markup Language" est toujours utilisé pour fournir des métadonnées au niveau du document.
 
-```yaml
+``` yaml
 ---
 title: "Let's dive into palmerpinguins !"`
 subtitle: An example of report
@@ -165,14 +150,10 @@ format:
 ---
 ```
 
-## YAML: Chunk options
+## YAML: Chunk options {auto-animate="true"}
 
-```{{r}}
-#| label: bill-dims-species
-#| warning: false
-#| fig-width: 5
-#| fig-asp: 0.618
-
+````{verbatim}
+```{r bill-dims-species, warning=FALSE, fig.width=5, fig.cap="A propos de penguins"}
 ggplot(
   penguins,
   aes(
@@ -185,18 +166,180 @@ ggplot(
   labs(x = "Bill length (mm)", y = "Bill depth (mm)") +
   theme_minimal()
 ```
+````
+
+## YAML: Chunk options {auto-animate="true"}
+
+::: r-stack
+````{verbatim}
+```{r}
+#| label: bill-dims-species
+#| warning: false
+#| fig-width: 5
+#| fig-cap: A propos de penguins
+ggplot(
+  penguins,
+  aes(
+    x = bill_length_mm, y = bill_depth_mm,
+    color = species, shape = species
+  )
+) +
+  geom_point() +
+  scale_color_colorblind() +
+  labs(x = "Bill length (mm)", y = "Bill depth (mm)") +
+  theme_minimal()
+```
+````
+
+::: fragment
+::: callout-tip
+## Convertir depuis R
+
+Voir `knitr::convert_chunk_header()`
+:::
+:::
+:::
+
+## A vous !
+
+```{r}
+#| echo: false
+countdown(minutes = 5)
+```
+
+::: callout
+# Transformons en .qmd
+
+1.  Partir de votre `.Rmd`
+2.  Utiliser `knitr::convert_chunk_header()` en configurant `output` pour créer un nouveau fichier `.qmd`
+3.  Vérifier les configurations des chunks de code
+4.  Modifier l'en-tête YAML du fichier `.qmd`
+5.  Produire un HTML
+:::
+
+::: callout-tip
+## Nouvelle fonctionnalité Quarto
+
+Tester l'autocompletion et validation YAML dans RStudio IDE
+:::
+
+# Quarto unifie R Mardown
+
+Retrouvons des fonctionnalités !
+
+## Callout Blocks {.smaller}
+
+![](https://github.com/rstudio/bookdown/raw/main/man/figures/logo.png){.absolute fig-alt="Logo bookdown" top="25" right="100" height="120"}
+
+| R Markdown                                                                                                                                          | Quarto                                                                                                                |
+|----------------------------------|--------------------------------------|
+| [Custom Blocks](https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html) de **rmarkdown** et **bookdown** à créer et *styliser* soit même. | [Callout Blocks](https://quarto.org/docs/authoring/callouts.html) disponible dans tous les formats et déjà *stylisé*. |
+
+``` markdown
+::: {.callout-note}
+Note that there are five types of callouts, including:
+`note`, `warning`, `important`, `tip`, and `caution`.
+:::
+```
+
+::: callout-note
+Note that there are five types of callouts, including: `note`, `warning`, `important`, `tip`, and `caution`.
+:::
+
+## Références (Figures, Tables, ...) {.smaller}
+
+![](https://github.com/rstudio/bookdown/raw/main/man/figures/logo.png){.absolute fig-alt="Logo bookdown" top="-40" right="100" height="120"}
+
+| R Markdown                                                                                                       | Quarto                                                                                                                                                |
+|----------------------------------|--------------------------------------|
+| Disponible avec **bookdown** dans les formats "book" (ex. `gitbook()`) ou les variantes comme `html_document2()` | [Cross References](https://quarto.org/docs/authoring/cross-references.html) disponible dans tous les formats, pour plus de contenus et configurables. |
+
+::: callout-important
+## Changement de syntaxe !
+
+-   Préfixe nécessaire sur le label sous la forme `fig-` et non `fig:`
+-   Même syntax que citation avec `@label` et non pas `\@ref(label)`
+:::
+
+``` {.markdown data-id="md-block"}
+Voir @fig-quarto-schematic pour une illustration du fonctionnement de Quarto par Alison Horst.
+
+![Un schéma illustré de Quarto](images/quarto-schematics.png){#fig-quarto-schematic}
+```
+
+## Références (Figures, Tables, ...) {.smaller}
+
+![](https://github.com/rstudio/bookdown/raw/main/man/figures/logo.png){.absolute fig-alt="Logo bookdown" top="-40" right="100" height="120"}
+
+``` {.markdown data-id="md-block"}
+Voir @fig-quarto-schematic pour une illustration du fonctionnement de Quarto par Alison Horst.
+
+![Un schéma illustré de Quarto](images/quarto-schematics.png){#fig-quarto-schematic}
+```
+
+::: columns
+::: column
+Voir @fig-quarto-schematic pour une illustration du fonctionnement de Quarto par Alison Horst.
+:::
+
+::: column
+![A schematic representing rendering of Quarto documents from .qmd](images/quarto-schematics.png){#fig-quarto-schematic fig-alt="A schematic representing rendering of Quarto documents from .qmd, to knitr or jupyter, to plain text markdown, then converted by pandoc into any number of output types including html, PDF, or Word document."}
+:::
+:::
+
+::: attribution
+Illustration extrait de la Keynote "Hello, Quarto" de Julia Lowndes et Mine Çetinkaya-Rundel (RStudio::conf(2022)).
+:::
+
+## Mise en page avancée {.smaller}
+
+![](https://github.com/rstudio/distill/raw/main/man/figures/logo.png){.absolute fig-alt="Logo distill" top="-40" right="100" height="120"}
+
+| R Markdown                                                                                                                                                                                                 | Quarto                                                                                                                         |
+|----------------------------------|--------------------------------------|
+| Disponible pour HTML avec **distill** ([Figure avancée](https://rstudio.github.io/distill/figures.html)) ou **tufte** ([Contenu dans la marge](https://rstudio.github.io/tufte/#arbitrary-margin-content)) | [Article Layout](https://quarto.org/docs/authoring/cross-references.html) disponible pour format multiple et plus flexibilité. |
+
+::: {layout-ncol=2}
+![](images/2-quarto-layout.png)
+
+![](images/3-quarto-layout.png)
+:::
+
+::: aside
+Attention à la conversion **distill** à Quarto à cause de conflits d'options ! 
+:::
+
+## A Vous !
+
+```{r}
+#| echo: false
+countdown(minutes = 10)
+```
+
+::: callout
+
+# Ajouter ces fonctionnalités !
+
+* Essayer d'ajouter les fonctionnalités suivantes: 
+  * [Article Layout](https://quarto.org/docs/authoring/cross-references.html), 
+  * [Cross References](https://quarto.org/docs/authoring/cross-references.html), 
+  * [Callout Blocks](https://quarto.org/docs/authoring/callouts.html)
+* Regarder comment ajouter des mises en pages pour les figures ([Figure computation](https://quarto.org/docs/authoring/figures.html#computations))
+* Et bien plus dans la section [Authoring](https://quarto.org/docs/guide/) du guide Quarto. Curieux des fonctionnalités uniques de Quarto ?
+  * [Code Annotation](https://quarto.org/docs/authoring/code-annotation.html)
+  * [Diagram](https://quarto.org/docs/authoring/diagrams.html)
+:::
 
 # Synthèse
 
 ## Qu'en est-il de R Markdown ? {.smaller}
 
 ::: incrémental
-
-- Vous pouvez rendre des documents R Markdown existants avec Quarto et vous pouvez les renommer en fichiers `.qmd` pour les transformer en documents Quarto.
-- Pas d'obligation-- R Markdown continue d'être maintenu.
-- Cependant, de nouvelles fonctionnalités sont en cours de développement pour Quarto.
-- De plus, Quarto
-    - vous permet de choisir votre propre éditeur et votre langage de préféré
-    - Il est livré avec des fonctionnalités plus riches et plus accessibles.
-    - est activement développé.
+-   Vous pouvez rendre des documents R Markdown existants avec Quarto et vous pouvez les renommer en fichiers `.qmd` pour les transformer en documents Quarto.
+-   Pas d'obligation-- R Markdown continue d'être maintenu.
+-   Cependant, de nouvelles fonctionnalités sont en cours de développement pour Quarto.
+-   De plus, Quarto
+    -   vous permet de choisir votre propre éditeur et votre langage de préféré
+    -   Il est livré avec des fonctionnalités plus riches et plus accessibles.
+    -   est activement développé.
 :::
