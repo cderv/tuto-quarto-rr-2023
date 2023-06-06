@@ -9,6 +9,26 @@ Avant le tutoriel, veuillez suivre les étapes suivantes :
 
 {{< include _preparatif.qmd >}}
 
+::: {.callout-tip}
+
+# Conseil
+
+Créez un dossier dédié sur votre environment pour la tutoriel afin d'y stocker les exercices, vos notes et pouvoir faire les exercices dans un environnement sain.
+
+**Ne pas créer de dossier R Studio car nous allons créer différents projets pour les exercies, et des sous-projets RStudio ne fonctionne pas bien**
+
+Exemple d'organisation: 
+
+```
+> tuto-quarto-RR-2023
+|-- notes/
+|-- exercices/
+  |-- projet-rstudio1/
+  |-- projet-quarto1/
+|-- README.md (pour y noter le contexte de ce dossier)
+```
+:::
+
 ## A connaître (ou réviser) pour être à l'aise
 
 Hypothèse pour le tutoriel: Vous connaissez R Markdown et vous connaissez la syntax Markdown.

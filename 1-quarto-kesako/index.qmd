@@ -12,3 +12,4 @@ title: "Quarto: Une évolution de R Markdown ?"
 
 ## Exercices
 
+-   <a href="https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exercises/simple-document.qmd">{{< fa download >}} `simple-document.qmd`</i></a>

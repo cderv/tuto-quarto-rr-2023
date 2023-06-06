@@ -13,23 +13,5 @@
 
 - Téléchargez `exercises.zip` et décompressez-le sur votre bureau ou à un endroit que vous pouvez facilement le localiser sur votre ordinateur. Ensuite, allez dans RStudio \> File \> New Project \> Existing Directory et naviguez jusqu'au dossier `exercises` dézippé et créez un projet RStudio à l'intérieur et ouvrez-le.
 
-::: {.callout-tip}
 
-# Conseil
-
-Créez un dossier dédié sur votre environment pour la tutoriel afin d'y stocker les exercices, vos notes et pouvoir faire les exercices dans un environnement sain.
-
-**Ne pas créer de dossier R Studio car nous allons créer différents projets pour les exercies, et des sous-projets RStudio ne fonctionne pas bien**
-
-Exemple d'organisation: 
-
-```
-> tuto-quarto-RR-2023
-|-- notes/
-|-- exercices/
-  |-- projet-rstudio1/
-  |-- projet-quarto1/
-|-- README.md (pour y noter le contexte de ce dossier)
-```
-:::
 

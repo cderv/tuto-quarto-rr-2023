@@ -96,10 +96,10 @@ countdown(seconds = 30)
 
 - Pendant les parties non exercices - levez la main {{< fa hand >}}
 
-- Pendant les exercies -- {{< fa hand >}}, mais utilisez aussi les autocollants pour vous signaler :
+- Pendant les exercices -- {{< fa hand >}}, mais utilisez aussi les autocollants pour vous signaler :
 
-    - Rose : J'ai besoin d'aide
-    - Vert : J'ai terminé
+    - [Rose]{.fg style="--col: pink"} : J'ai besoin d'aide
+    - [Vert]{.fg style="--col: green"} : J'ai terminé
 
 ## 
 
@@ -263,7 +263,18 @@ countdown(minutes = 5)
 
 1. Ouvrir RStudio 
 2. Se placer dans un dossier vierge (ou où vous souhaitez)
-3. Créer un nouveau document Quarto
+3. Créer un nouveau document Quarto - vous pouvez l'appelez `simple-document.qmd`
 4. Cliquer sur "Render"
 5. Ouvrir le visual editor
 :::
+
+::: callout-tips
+`simple-document.qmd` est disponible pour [téléchargement](/1-quarto-kesako/#exercices) si besoin
+:::
+
+# 
+
+Voyons pour passer de Rmd à Quarto maintenant... 
+
+[[Next]{.button}](/2-rmd-quarto/)
+
