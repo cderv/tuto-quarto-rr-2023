@@ -1,0 +1,70 @@
+---
+title: "Une histoire de pingouins"
+lang: fr
+date: "2023-06-21"
+---
+
+## Données
+
+Pour cette analyse, nous utiliserons le jeu de données sur les pingouins du paquet R `palmerpenguins` (<https://allisonhorst.github.io/palmerpenguins>).
+
+```{r}
+#| label: load-packages
+#| message: false
+library(tidyverse)
+library(palmerpenguins)
+library(gt)
+```
+
+Les données `penguins` contiennent les éléments suivants 
+
+```{r}
+glimpse(penguins)
+```
+
+## Espèces
+
+Nous avons `r length(unique(penguins$species))` des espèces dans ce jeu de données : `r knitr::combine_words(unique(penguins$species))` qui ne sont pas distribuées de manière égale.
+
+```{r}
+penguins |>
+  count(species) |>
+  knitr::kable()
+```
+
+```{r}
+#| echo: false
+#| out-width: 75%
+#| fig-align: center
+#| fig-alt: Illustration de la longueur et de la profondeur du bec des manchots
+knitr::include_graphics("https://allisonhorst.github.io/palmerpenguins/reference/figures/culmen_depth.png")
+```
+
+La figure ci-dessous montrent les différences de becs par espèces.
+
+```{r}
+#| label: species
+#| warning: false
+#| fig_with: 5.0
+ggplot(
+  penguins,
+  aes(
+    x = bill_length_mm, y = bill_depth_mm,
+    color = species, shape = species
+  )
+) +
+  geom_point() +
+  labs(x = "Longueur du bec (mm)", y = "Profondeur du bec (mm)")
+```
+
+## Pingouins
+
+Le tableau ci-dessous présente les 10 premiers manchots de l'ensemble de données.
+
+```{r}
+#| label: top10
+penguins |>
+  slice_head(n = 10) |>
+  select(species, island, bill_length_mm, bill_depth_mm) |>
+  gt()
+```

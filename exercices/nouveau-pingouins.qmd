@@ -1,0 +1,86 @@
+---
+title: "Une histoire de pingouins"
+lang: fr
+date: "2023-06-21"
+format: 
+  html:
+    toc: true
+code-annotations: hover
+---
+
+## Données
+
+Pour cette analyse, nous utiliserons le jeu de données sur les pingouins du paquet R `palmerpenguins` (<https://allisonhorst.github.io/palmerpenguins>).
+
+```{r}
+#| label: load-packages
+#| message: false
+library(tidyverse)
+library(palmerpenguins)
+library(gt)
+```
+
+Les données `penguins` contiennent les éléments suivants 
+
+```{r}
+glimpse(penguins)
+```
+
+## Espèces
+
+Nous avons `r length(unique(penguins$species))` des espèces dans ce jeu de données : `r knitr::combine_words(unique(penguins$species))` qui ne sont pas distribuées de manière égale.
+
+```{r}
+#| column: margin
+penguins |>
+  count(species) %>%
+  knitr::kable()
+```
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-alt: Illustration de la longueur et de la profondeur du bec des manchots
+#| column: page
+knitr::include_graphics("https://allisonhorst.github.io/palmerpenguins/reference/figures/culmen_depth.png")
+```
+
+La @fig-species montrent les différences de becs par espèces.
+
+```{r}
+#| label: fig-species
+#| warning: false
+#| fig-with: 5.0
+#| fig-cap: Catégorisation des espèces selon la taille leur bec
+ggplot(
+  penguins,
+  aes(
+    x = bill_length_mm, y = bill_depth_mm,
+    color = species, shape = species
+  )
+) +
+  geom_point() +
+  labs(x = "Longueur du bec (mm)", y = "Profondeur du bec (mm)")
+```
+
+## Pingouins
+
+Le tableau ci-dessous présente les 10 premiers manchots de l'ensemble de données.
+
+```{r}
+#| label: top10
+penguins |>
+  slice_head(n = 10) |>
+  select(species, island, bill_length_mm, bill_depth_mm) |>
+  gt() # <1>
+```
+
+1. On utilise **gt** ici, mais tout paquet de tableau peut être utilisé par example **flextable**
+
+::: {.callout-note collapse=true}
+
+## Pour aller plus loin sur ce jeu de donnée
+
+Consulter la vignette du paquet R **palmerpinguins** disponible sur <https://allisonhorst.github.io/palmerpenguins/>
+:::
+

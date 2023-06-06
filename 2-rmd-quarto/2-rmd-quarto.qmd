@@ -123,11 +123,17 @@ countdown(minutes = 2)
 # Ajoutons au projet
 
 1.  Créer un sous-dossier dans le projet e.g `rapport`
-2.  Y déposer le fichier `.Rmd` d'exercices nommé TODO tel quel
-3.  Produire un HTML
-4.  Comparer le comportement entre
-    -   RStudio \> Render depuis la source, ou le *visual editor*
-    -   le terminal avec `quarto render`
+2.  Y déposer le fichier `.Rmd` d'exercices nommé [`pingouins.Rmd`](https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exercises/pingouins.Rmd) tel quel
+3.  Produire un HTML avec `quarto preview rapport/pingouins.Rmd` dans le Terminal 
+4.  Produire un HTML avec le bouton Render de l'IDE
+
+:::
+
+::: callout-tip
+
+## Afficher le bouton Render au lieu de Knit pour un Rmd dans un projet Quarto
+
+Retirer `output: html_document` de l'en-tête YAML and sauver le fichier: Le bouton **Render** devrait maintenant apparaître.
 :::
 
 # De `.Rmd` à `.qmd`
@@ -138,10 +144,9 @@ Voyons ce qui change!
 
 Le "Yet Another Markup Language" ou "YAML Ain't Markup Language" est toujours utilisé pour fournir des métadonnées au niveau du document.
 
-``` yaml
+```{.yaml code-line-numbers="|5-7"}
 ---
-title: "Let's dive into palmerpinguins !"`
-subtitle: An example of report
+title: "Une histoire de pingouins"`
 author: "C. Dervieux"
 date: "21/06/2023"
 format: 
@@ -153,7 +158,7 @@ format:
 ## YAML: Chunk options {auto-animate="true"}
 
 ````{verbatim}
-```{r bill-dims-species, warning=FALSE, fig.width=5, fig.cap="A propos de penguins"}
+```{r species, warning=FALSE, fig.width=5, fig.cap="A propos de penguins"}
 ggplot(
   penguins,
   aes(
@@ -162,15 +167,12 @@ ggplot(
   )
 ) +
   geom_point() +
-  scale_color_colorblind() +
-  labs(x = "Bill length (mm)", y = "Bill depth (mm)") +
-  theme_minimal()
+  labs(x = "Bill length (mm)", y = "Bill depth (mm)")
 ```
 ````
 
 ## YAML: Chunk options {auto-animate="true"}
 
-::: r-stack
 ````{verbatim}
 ```{r}
 #| label: bill-dims-species
@@ -191,13 +193,18 @@ ggplot(
 ```
 ````
 
-::: fragment
-::: callout-tip
-## Convertir depuis R
+## YAML: Chunk options {auto-animate="true"}
 
-Voir `knitr::convert_chunk_header()`
-:::
-:::
+````yaml
+#| fig-width: 5
+#| fig-cap: A propos de penguins
+````
+::: callout-important
+
+## Le tiret `-` est utilisé à la place du point `.` dans Quarto.
+
+Les deux fonctionnent pour les options **knitr**, mais la _vraie_ syntaxe Quarto est avec un tiret. 
+Les options Quarto seront avec un tiret, et le tiret est nécessaire pour les options communes (ex. `fig-alt` pour Knitr et Jupyter)
 :::
 
 ## A vous !
@@ -210,11 +217,11 @@ countdown(minutes = 5)
 ::: callout
 # Transformons en .qmd
 
-1.  Partir de votre `.Rmd`
-2.  Utiliser `knitr::convert_chunk_header()` en configurant `output` pour créer un nouveau fichier `.qmd`
-3.  Vérifier les configurations des chunks de code
-4.  Modifier l'en-tête YAML du fichier `.qmd`
-5.  Produire un HTML
+1.  Copier `pingouins.Rmd` à `nouveau-pingouins.qmd`
+2.  Utiliser `knitr::convert_chunk_header()` sur le fichier .qmd (Regarder l'aide de la fonction)
+3.  Vérifier les configurations des chunks de code (`.` à transformer en `-` par example)
+4.  Vérifier l'en-tête YAML du fichier `.qmd`
+5.  Produire un HTML du document au format `.qmd`
 :::
 
 ::: callout-tip
@@ -229,7 +236,7 @@ Retrouvons des fonctionnalités !
 
 ## Callout Blocks {.smaller}
 
-![](https://github.com/rstudio/bookdown/raw/main/man/figures/logo.png){.absolute fig-alt="Logo bookdown" top="25" right="100" height="120"}
+![](https://github.com/rstudio/bookdown/raw/main/man/figures/logo.png){.absolute fig-alt="Logo bookdown" top="-20" right="100" height="120"}
 
 | R Markdown                                                                                                                                          | Quarto                                                                                                                |
 |----------------------------------|--------------------------------------|
@@ -237,13 +244,18 @@ Retrouvons des fonctionnalités !
 
 ``` markdown
 ::: {.callout-note}
-Note that there are five types of callouts, including:
-`note`, `warning`, `important`, `tip`, and `caution`.
+
+## À propos des 'callouts'
+
+Notez qu'il existe cinq types de 'callout', dont : `note`, `warning`, `important`, `tip`, et `caution`.
 :::
 ```
 
 ::: callout-note
-Note that there are five types of callouts, including: `note`, `warning`, `important`, `tip`, and `caution`.
+
+## À propos des 'callouts'
+
+Notez qu'il existe cinq types de 'callout', dont : `note`, `warning`, `important`, `tip`, et `caution`.
 :::
 
 ## Références (Figures, Tables, ...) {.smaller}
@@ -318,7 +330,7 @@ countdown(minutes = 10)
 
 ::: callout
 
-# Ajouter ces fonctionnalités !
+# Ajoutez ces fonctionnalités !
 
 * Essayer d'ajouter les fonctionnalités suivantes: 
   * [Article Layout](https://quarto.org/docs/authoring/cross-references.html), 
@@ -343,3 +355,9 @@ countdown(minutes = 10)
     -   Il est livré avec des fonctionnalités plus riches et plus accessibles.
     -   est activement développé.
 :::
+
+# 
+
+Allons plus pour produire des documents avec Quarto 
+
+[[Next]{.button}](/3-documents/)
