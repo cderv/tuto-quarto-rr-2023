@@ -176,7 +176,6 @@ ggplot(
 ````{verbatim}
 ```{r}
 #| label: bill-dims-species
-#| warning: false
 #| fig-width: 5
 #| fig-cap: A propos de penguins
 ggplot(
@@ -196,16 +195,29 @@ ggplot(
 ## YAML: Chunk options {auto-animate="true"}
 
 ````yaml
+#| label: bill-dims-species
 #| fig-width: 5
 #| fig-cap: A propos de penguins
 ````
-::: callout-important
+Quarto introduit le "hash pipe" dans `#|` - c'est la syntaxe préférée, bien que Quarto soit rétrocompatible avec l'ancienne syntaxe R Markdown.
 
-## Le tiret `-` est utilisé à la place du point `.` dans Quarto.
+1. Cohérence entre les _computation engine_ (Jupyter/knitr)
+2. Cohérence entre les options YAML / Chunk / Divs (`:::`)
+3. Plus de contrôle sur l'ordre et l'espacement des _chunk options_ - pas limité à une seule ligne d'options !
 
-Les deux fonctionnent pour les options **knitr**, mais la _vraie_ syntaxe Quarto est avec un tiret. 
-Les options Quarto seront avec un tiret, et le tiret est nécessaire pour les options communes (ex. `fig-alt` pour Knitr et Jupyter)
+## YAML: Chunk options {auto-animate="true"}
+
+````yaml
+#| fig-width: 5
+#| fig-cap: A propos de penguins
+````
+
+Notez que le YAML pour Quarto suivra une syntaxe de type "mot-mot"
+
+::: {.callout-note appearance="minimal"}
+La différence de syntaxe est due au fait que Quarto est plus étroitement aligné sur les noms de format et les options de Pandoc (d'où l'utilisation de - comme séparateur de mots au lieu de `_` ou `.`).
 :::
+
 
 ## A vous !
 
