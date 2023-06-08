@@ -1,0 +1,20 @@
+{
+  "hash": "3f3f20ec68122be957086f8de868d290",
+  "result": {
+    "markdown": "---\ntitle: \"Une histoire de pingouins\"\nlang: fr\ndate: \"2023-06-21\"\nformat: \n  html: default\n  pdf: default\ntoc: true\ncode-annotations: hover\n---\n\n\n\n## Données\n\nPour cette analyse, nous utiliserons le jeu de données sur les pingouins du paquet R `palmerpenguins` (<https://allisonhorst.github.io/palmerpenguins>).\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\nlibrary(palmerpenguins)\nlibrary(gt)\n```\n:::\n\n\n\nLes données `penguins` contiennent les éléments suivants \n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nglimpse(penguins)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\nRows: 344\nColumns: 8\n$ species           <fct> Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel~\n$ island            <fct> Torgersen, Torgersen, Torgersen, Torgersen, Torgerse~\n$ bill_length_mm    <dbl> 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, ~\n$ bill_depth_mm     <dbl> 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, ~\n$ flipper_length_mm <int> 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186~\n$ body_mass_g       <int> 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, ~\n$ sex               <fct> male, female, female, NA, female, male, female, male~\n$ year              <int> 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007~\n```\n:::\n:::\n\n\n\n## Espèces\n\nNous avons 3 des espèces dans ce jeu de données : Adelie, Gentoo, and Chinstrap qui ne sont pas distribuées de manière égale.\n\n\n\n::: {.cell .column-margin}\n\n```{.r .cell-code}\npenguins |>\n  count(species) %>%\n  knitr::kable()\n```\n\n::: {.cell-output-display}\n|species   |   n|\n|:---------|---:|\n|Adelie    | 152|\n|Chinstrap |  68|\n|Gentoo    | 124|\n:::\n:::\n\n::: {.cell .column-page layout-align=\"center\"}\n::: {.cell-output-display}\n![](https://allisonhorst.github.io/palmerpenguins/reference/figures/culmen_depth.png){fig-align='center' fig-alt='Illustration de la longueur et de la profondeur du bec des manchots'}\n:::\n:::\n\n\n\nLa @fig-species montrent les différences de becs par espèces.\n\n\n\n::: {.cell fig.with='5'}\n\n```{.r .cell-code}\nggplot(\n  penguins,\n  aes(\n    x = bill_length_mm, y = bill_depth_mm,\n    color = species, shape = species\n  )\n) +\n  geom_point() +\n  labs(x = \"Longueur du bec (mm)\", y = \"Profondeur du bec (mm)\")\n```\n\n::: {.cell-output-display}\n![Catégorisation des espèces selon la taille leur bec](nouveau-pingouins-pdf_files/figure-pdf/fig-species-1.pdf){#fig-species fig-pos='H'}\n:::\n:::\n\n\n\n## Pingouins\n\nLe tableau ci-dessous présente les 10 premiers manchots de l'ensemble de données.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\npenguins |>\n  slice_head(n = 10) |>\n  select(species, island, bill_length_mm, bill_depth_mm) |>\n  gt() # <1>\n```\n\n::: {.cell-output-display}\n\\begin{longtable}{ccrr}\n\\toprule\nspecies & island & bill\\_length\\_mm & bill\\_depth\\_mm \\\\ \n\\midrule\nAdelie & Torgersen & 39.1 & 18.7 \\\\ \nAdelie & Torgersen & 39.5 & 17.4 \\\\ \nAdelie & Torgersen & 40.3 & 18.0 \\\\ \nAdelie & Torgersen & NA & NA \\\\ \nAdelie & Torgersen & 36.7 & 19.3 \\\\ \nAdelie & Torgersen & 39.3 & 20.6 \\\\ \nAdelie & Torgersen & 38.9 & 17.8 \\\\ \nAdelie & Torgersen & 39.2 & 19.6 \\\\ \nAdelie & Torgersen & 34.1 & 18.1 \\\\ \nAdelie & Torgersen & 42.0 & 20.2 \\\\ \n\\bottomrule\n\\end{longtable}\n:::\n:::\n\n\n\n1. On utilise **gt** ici, mais tout paquet de tableau peut être utilisé par example **flextable**\n\n::: {.callout-note collapse=true}\n\n## Pour aller plus loin sur ce jeu de donnée\n\nConsulter la vignette du paquet R **palmerpinguins** disponible sur <https://allisonhorst.github.io/palmerpenguins/>\n:::\n\n",
+    "supporting": [
+      "nouveau-pingouins-pdf_files\\figure-pdf"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "\\usepackage{booktabs}\r\n\\usepackage{caption}\r\n\\usepackage{longtable}\r\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": null,
+    "postProcess": false
+  }
+}

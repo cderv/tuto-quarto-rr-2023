@@ -71,9 +71,9 @@ toc: true #<1>
 
 # Options Specifiques
 
-## Themes HTML {#html-theme}
+## Themes HTML {#html-theme .smaller}
 
-Le HTML de Quarto est stylisé avec Bootstrap 5 et des valeurs par défaut choisies pour Quarto (_opiniated defaults_).
+Le HTML de Quarto est stylisé avec Bootstrap 5 et des valeurs par défaut choisies pour Quarto.
 
 ```yaml
 ---
@@ -140,7 +140,7 @@ Une syntaxe commune pour simplifier !
 
 ::: {.callout-warning}
 
-## Etre configuré pour LaTeX 
+## Etre configuré pour LaTeX mais
 
 Vous pouvez essayer 
 
