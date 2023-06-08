@@ -53,7 +53,8 @@ A consulter sur: <https://rr2023.sciencesconf.org/resource/page/id/10>
 
 -   **TA:** Maëlle Salmon
 
-    -   TODO
+    -   Développeuse Open-Source, Bloggueuse (rOpenSci, cynkra, etc.)
+    -   Autrice de {babelquarto}, pour livres Quarto multilangues 
 
 -   **Les deux:** développeur·euse·s R depuis plusieurs années, utilisateur·rice·s R Markdown et Quarto avancé·e·s
 
