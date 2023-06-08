@@ -123,8 +123,8 @@ countdown(minutes = 2)
 # Ajoutons au projet
 
 1.  Créer un sous-dossier dans le projet e.g `rapport`
-2.  Y déposer le fichier `.Rmd` d'exercices nommé [`pingouins.Rmd`](https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exercises/pingouins.Rmd) tel quel
-3.  Produire un HTML avec `quarto preview rapport/pingouins.Rmd` dans le Terminal 
+2.  Y déposer le fichier `.Rmd` d'exercices nommé [`manchots.Rmd`](https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exercises/manchots.Rmd) tel quel
+3.  Produire un HTML avec `quarto preview rapport/manchots.Rmd` dans le Terminal 
 4.  Produire un HTML avec le bouton Render de l'IDE
 
 :::
@@ -146,7 +146,7 @@ Le "Yet Another Markup Language" ou "YAML Ain't Markup Language" est toujours ut
 
 ```{.yaml code-line-numbers="|5-7"}
 ---
-title: "Une histoire de pingouins"
+title: "Une histoire de manchots"
 author: "C. Dervieux"
 date: "21/06/2023"
 format: 
@@ -194,6 +194,8 @@ ggplot(
 
 ## YAML: Chunk options {auto-animate="true"}
 
+:::: {.r-stack}
+
 ````yaml
 #| label: bill-dims-species
 #| fig-width: 5
@@ -203,11 +205,17 @@ Quarto introduit le "hash pipe" dans `#|` - c'est la syntaxe préférée, bien q
 
 1. Cohérence entre les _computation engine_ (Jupyter/knitr)
 2. Cohérence entre les options YAML / Chunk / Divs (`:::`)
-3. Une option par ligne, offrant l'autocomplétion
+3. Une option par ligne, offrant l'autocomplétion et la validation
 
 ::: {.fragment}
-![]()
+![](images/yaml-completion.png)
 :::
+
+::: {.fragment}
+![](images/yaml-diagnostics.png)
+:::
+
+::::
 
 ## YAML: Chunk options {auto-animate="true"}
 
@@ -233,7 +241,7 @@ countdown(minutes = 5)
 ::: callout
 # Transformons en .qmd
 
-1.  Copier `pingouins.Rmd` à `nouveau-pingouins.qmd`
+1.  Copier `manchots.Rmd` à `nouveau-manchots.qmd`
 2.  Utiliser `knitr::convert_chunk_header()` sur le fichier .qmd (Regarder l'aide de la fonction)
 3.  Vérifier les configurations des chunks de code (`.` à transformer en `-` par example)
 4.  Vérifier l'en-tête YAML du fichier `.qmd`

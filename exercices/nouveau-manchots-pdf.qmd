@@ -1,5 +1,5 @@
 ---
-title: "Une histoire de pingouins"
+title: "Une histoire de manchots"
 lang: fr
 date: "2023-06-21"
 format: 
@@ -11,7 +11,7 @@ code-annotations: hover
 
 ## Données
 
-Pour cette analyse, nous utiliserons le jeu de données sur les pingouins du paquet R `palmerpenguins` (<https://allisonhorst.github.io/palmerpenguins>).
+Pour cette analyse, nous utiliserons le jeu de données sur les manchots du paquet R `palmerpenguins` (<https://allisonhorst.github.io/palmerpenguins>).
 
 ```{r}
 #| label: load-packages
@@ -64,7 +64,7 @@ ggplot(
   labs(x = "Longueur du bec (mm)", y = "Profondeur du bec (mm)")
 ```
 
-## Pingouins
+## manchots
 
 Le tableau ci-dessous présente les 10 premiers manchots de l'ensemble de données.
 
