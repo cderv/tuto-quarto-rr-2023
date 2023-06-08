@@ -37,3 +37,10 @@ $presentation-font-size-root: 36px !default;
     }
 }
 
+dl.code-annotation-container-grid {
+    padding-top: 1em;
+}
+
+#html-theme .callout-note {
+    background-color: $body-bg;
+}

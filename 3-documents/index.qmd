@@ -4,7 +4,12 @@ title: "Produire simplement des documents de qualité"
 
 ## Slides
 
-{{< fa tv >}} [Ouvrir les slides en plein écran]()
+{{< fa tv >}} [Ouvrir les slides en plein écran](3-documents.html)
 
 ## Exercices
+
+
+-   Doc initiale: <a href="https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exercises/nouveau-pingouins.qmd">{{< fa download >}} `nouveau-pingouins.qmd`</i></a>
+-   Doc avec format `pdf` ajouté: <a href="https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exercises/nouveau-pingouins.qmd">{{< fa download >}} `nouveau-pingouins-pdf.qmd`</i></a>
+-   Rendu PDF: <a href="https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exercises/nouveau-pingouins-pdf.pdf">{{< fa download >}} `nouveau-pingouins-pdf.pdf`</i></a>
 
