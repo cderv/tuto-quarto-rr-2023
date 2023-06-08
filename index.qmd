@@ -1,6 +1,9 @@
 ---
 title: "De R Markdown à Quarto pour aller plus loin avec ses publications"
 subtitle: Rencontres R 2023
+format: html
+author: ""
+date: ""
 ---
 
 Quarto est la nouvelle génération de R Markdown pour la publication de documents dynamiques et statiques avec un support multilingue des langages de programmation. Avec Quarto, vous pouvez créer des documents, des livres, des présentations, des blogs ou d'autres ressources en ligne.

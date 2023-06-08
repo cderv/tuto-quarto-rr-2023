@@ -1,0 +1,167 @@
+---
+title: "Les projets Quarto pour des contenus élaborés"
+subtitle: "De R Markdown à Quarto pour aller plus loin avec ses publications"
+institute: "Posit"
+author: "Christophe Dervieux"
+date: "2023-06-21"
+format: clean-revealjs
+code-line-numbers: false
+editor: visual
+filter:
+  - lightbox
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+options(width = 65)
+
+library(countdown)
+```
+
+## Projet Quarto ?
+
+Les projets Quarto sont des **répertoires** qui fournissent :
+
+::: incremental
+* un moyen de rendre tout ou partie des fichiers d'un répertoire à l'aide d'une seule commande (par exemple, `quarto render myproject`).
+* Un moyen de partager la configuration YAML entre plusieurs documents.
+* La possibilité de rediriger les artefacts de sortie vers un autre répertoire.
+* La possibilité de geler le rendu (c'est-à-dire de ne pas réexécuter les documents à moins qu'ils n'aient changé).
+:::
+
+## Nous avons créés un projet déjà...
+
+Un projet, c'est un répertoire avec un `_quarto.yml` aussi simple soit t'il.
+
+``` {.yaml filename="_quarto.yml"}
+project:
+  title: "Quarto-101"
+```
+
+Mais, les projets peuvent avoir des "types" spéciaux qui introduisent un comportement supplémentaire (par exemple, les sites web ou les livres).
+
+## Quarto Website`
+
+-   Profondeur et organisation arbitraires du contenu
+-   Navigation à plusieurs niveaux (barre de navigation / barre latérale / hybride)
+-   Recherche en texte intégral (côté client ou Algolia)
+-   Gel des résultats de calcul (configuration `freeze`)
+
+## Quarto Website
+
+``` {.yaml filename="_quarto.yml" code-line-numbers="|2|4-5|6-10|12-15"}
+project:
+  type: website
+
+website:
+  title: "today"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+```
+
+::: aside
+Exemple: <https://quarto.org>
+:::
+
+## Quarto Blogs
+
+* Hérite des fonctionnalités des sites Quarto (navigation, recherche, etc.)
+
+* Liste d'article et flux RSS générés automatiquement
+
+```{.yaml filename="index.qmd"}
+---
+title: "myblog"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+---
+```
+
+## {background-image=images/screenshot-blog.png}
+
+## Quarto Books
+
+-   Hérite des fonctionnalités des sites Quarto (navigation, recherche, etc.)
+-   Supporte les références croisées entre les chapitres
+-   Les formats de sortie possible sont HTML, PDF, MS Word et ePub.
+
+::: aside
+Exemples: <https://quarto.org/docs/gallery/#books>
+:::
+
+## Quarto Books
+
+```{.yaml filename="_quarto.yml" code-line-numbers="|2|4-5|8-12|14|16-22"}
+project:
+  type: book
+
+book:
+  title: "mybook"
+  author: "Jane Doe"
+  date: "8/18/2021"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreport
+  epub:
+    cover-image: cover.png
+```
+
+##  {background-image="images/screenshot-book-hopr.png"}
+
+## Et bien plus de nouveautés...
+
+- [Métadonnées partagées par sous dossier](https://quarto.org/docs/projects/quarto-projects.html#shared-metadata) avec `_metadata.yml`
+- [Exécuter des scripts avant et après `quarto render` (_Project Scripts)](https://quarto.org/docs/projects/scripts.html)
+- [_About Page_ comme le package R **postcard**](https://quarto.org/docs/websites/website-about.html#templates)
+- [Création de liste d'articles personnalisés](https://quarto.org/docs/websites/website-listings-custom.html)
+- ...
+
+## A vous! 
+
+```{r}
+#| echo: false
+countdown(minutes = 10)
+```
+
+::: {.callout}
+
+# Transformons notre projet en site web
+
+1. Ajouter un `index.qmd` dans votre projet existant `Quarto-101`
+2. Modifier le `_quarto.yml` pour faire un site web
+3. Ajoutez la navigation pour affichier votre rapport `nouveau-manchots.qmd`
+4. `Render` depuis `index.qmd` et admirez le résultas
+:::
+
+::: callout-tip
+Documentations de Quarto websites pour jouer avec les options: https://quarto.org/docs/websites/
+:::
+
+# 
+
+Passons au récap...
+
+[[Next]{.button}](/3-documents/)

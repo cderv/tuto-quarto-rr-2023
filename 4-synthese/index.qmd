@@ -1,0 +1,13 @@
+---
+title: "Travailler avec les projets Quarto "
+author: ""
+date: ""
+format: html
+---
+
+## Slides
+
+{{< fa tv >}} [Ouvrir les slides en plein écran]()
+
+## Exercices
+

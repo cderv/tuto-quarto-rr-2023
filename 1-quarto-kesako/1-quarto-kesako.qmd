@@ -4,18 +4,8 @@ subtitle: "De R Markdown à Quarto pour aller plus loin avec ses publications"
 institute: "Posit"
 author: "Christophe Dervieux"
 date: "2023-06-21"
-footer: "[🔗 cderv.quarto.pub/tuto-quarto-rr-2023]()"
-format:
-  clean-revealjs:
-    theme: [default, ../reveal-style.scss]
-    transition: fade
-    chalkboard: true
-revealjs-plugins:
-  - attribution
+format: clean-revealjs
 editor: visual
-execute:
-  freeze: auto
-  echo: true
 ---
 
 ```{r}
@@ -180,7 +170,7 @@ Oui construit sur une 10ans de knitr + rmarkdown -> Même principe...
 
 **étend** pour les personnes qui ne connaissent pas R Markdown
 
-## Quarto unifie + étend R Markdown
+## Quarto unifie + étend R Markdown {visibility="hidden"}
 
 ::: incremental
 - Implémentation cohérente de fonctionnalités pour les différents formats de sorties : tabsets, code-folding, syntax highlighting, etc. 
@@ -268,7 +258,7 @@ countdown(minutes = 5)
 5. Ouvrir le visual editor
 :::
 
-::: callout-tips
+::: callout-tip
 `simple-document.qmd` est disponible pour [téléchargement](/1-quarto-kesako/#exercices) si besoin
 :::
 

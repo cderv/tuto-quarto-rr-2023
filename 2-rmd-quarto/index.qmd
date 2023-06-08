@@ -1,5 +1,8 @@
 ---
 title: "Comment passer de rmarkdown à quarto ?"
+author: ""
+date: ""
+format: html
 ---
 
 ## Slides
@@ -13,5 +16,5 @@ title: "Comment passer de rmarkdown à quarto ?"
 ## Exercices
 
 -   <a href="https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exercises/quarto-101.zip">{{< fa download >}} `quarto-101.zip`</i></a>
--   <a href="https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exercises/pingouins.Rmd">{{< fa download >}} `pingouins.Rmd`</i></a>
--   <a href="https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exercises/nouveau-pingouins.qmd">{{< fa download >}} `nouveau-pingouins.qmd`</i></a>
+-   <a href="https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exercises/manchots.Rmd">{{< fa download >}} `manchots.Rmd`</i></a>
+-   <a href="https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exercises/nouveau-manchots.qmd">{{< fa download >}} `nouveau-manchots.qmd`</i></a>

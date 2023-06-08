@@ -1,0 +1,17 @@
+---
+title: "Travailler avec les projets Quarto "
+format: html
+author: ""
+date: ""
+---
+
+## Slides
+
+{{< fa tv >}} [Ouvrir les slides en plein écran](3-projets.html)
+
+```{=html}
+<iframe class="slide-deck" src="3-projets.html" height="420" width="747" style="border: 1px solid #123233;"></iframe>
+```
+
+## Exercices
+

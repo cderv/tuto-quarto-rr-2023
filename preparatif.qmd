@@ -1,6 +1,9 @@
 ---
 title : "Instructions préalables au tutoriel"
-subtitle: Etre prêt pour le jour J
+subtitle: Etre prêt pour le jour Jf
+format: html
+author: ""
+date: ""
 ---
 
 Avant le tutoriel, veuillez suivre les étapes suivantes :

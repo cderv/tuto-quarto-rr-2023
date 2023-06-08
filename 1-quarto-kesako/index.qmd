@@ -1,5 +1,8 @@
 ---
 title: "Quarto: Une évolution de R Markdown ?"
+author: ""
+date: ""
+format: html
 ---
 
 ## Slides

@@ -4,18 +4,8 @@ subtitle: "De R Markdown à Quarto pour aller plus loin avec ses publications"
 institute: "Posit"
 author: "Christophe Dervieux"
 date: "2023-06-21"
-footer: "[🔗 cderv.quarto.pub/tuto-quarto-rr-2023]()"
-format:
-  clean-revealjs:
-    theme: [default, ../reveal-style.scss]
-    transition: fade
-    chalkboard: true
-revealjs-plugins:
-  - attribution
+format: clean-revealjs
 editor: visual
-execute:
-  freeze: auto
-  echo: true
 ---
 
 ```{r}
@@ -194,28 +184,17 @@ ggplot(
 
 ## YAML: Chunk options {auto-animate="true"}
 
-:::: {.r-stack}
-
 ````yaml
 #| label: bill-dims-species
 #| fig-width: 5
 #| fig-cap: A propos de penguins
 ````
+
 Quarto introduit le "hash pipe" dans `#|` - c'est la syntaxe préférée, bien que Quarto soit rétrocompatible avec l'ancienne syntaxe R Markdown.
 
 1. Cohérence entre les _computation engine_ (Jupyter/knitr)
 2. Cohérence entre les options YAML / Chunk / Divs (`:::`)
 3. Une option par ligne, offrant l'autocomplétion et la validation
-
-::: {.fragment}
-![](images/yaml-completion.png)
-:::
-
-::: {.fragment}
-![](images/yaml-diagnostics.png)
-:::
-
-::::
 
 ## YAML: Chunk options {auto-animate="true"}
 
@@ -251,7 +230,7 @@ countdown(minutes = 5)
 ::: callout-tip
 ## Nouvelle fonctionnalité Quarto
 
-Tester l'autocompletion et validation YAML dans RStudio IDE
+Tester l'autocompletion et validation YAML dans RStudio IDE [🔗](https://quarto.org/docs/tools/rstudio.html#yaml-intelligence)
 :::
 
 # Quarto unifie R Mardown
@@ -366,22 +345,118 @@ countdown(minutes = 10)
   * [Diagram](https://quarto.org/docs/authoring/diagrams.html)
 :::
 
-# Synthèse
+# Les formats Quarto
 
-## Qu'en est-il de R Markdown ? {.smaller}
+Comme R Markdown, on peut produire différents formats de documents.
 
-::: incrémental
--   Vous pouvez rendre des documents R Markdown existants avec Quarto et vous pouvez les renommer en fichiers `.qmd` pour les transformer en documents Quarto.
--   Pas d'obligation-- R Markdown continue d'être maintenu.
--   Cependant, de nouvelles fonctionnalités sont en cours de développement pour Quarto.
--   De plus, Quarto
-    -   vous permet de choisir votre propre éditeur et votre langage de préféré
-    -   Il est livré avec des fonctionnalités plus riches et plus accessibles.
-    -   est activement développé.
+## De multiples formats...
+
+:::: columns
+::: column
+* `format: html`
+* `format: pdf`
+:::
+::: column
+* `format: docx`
+* `format: revealjs`
+:::
+::::
+
+```yaml
+format: 
+  html:
+    code-fold: true
+  pdf:
+    lof: true #<1>
+toc: true #<2>
+```
+1. `lof` = _List Of Figures_
+2. Option commune aux formats HTML et PDF
+
+<br>
+
+## ...basée sur Pandoc 
+
+## {background-video="images/quarto-all-formats.mp4" background-video-loop=true background-video-muted=true}
+
+## Options Specifiques - Themes HTML
+
+Le HTML de Quarto est stylisé avec Bootstrap 5 et des valeurs par défaut choisies pour Quarto.
+
+```yaml
+---
+format:
+  html:
+    theme: litera
+---
+```
+
+## Options Specifiques - Themes HTML {#html-theme auto-animate="true"}
+
+Le HTML de Quarto est stylisé avec Bootstrap 5 et des valeurs par défaut choisies pour Quarto.
+
+```yaml
+---
+format:
+  html:
+    theme: 
+      - litera
+      - custom.scss
+---
+```
+
+::::: {.r-stack}
+
+Vous pouvez également utiliser un thème et personnaliser les composants avec SCSS/SASS.
+
+:::: {.fragment}
+
+::: {.callout-note appearance="minimal"}
+Talk sur le sujet plus tard dans la semaine ! 😉
+:::
+
+::::
+:::::
+
+## _Code tools_
+
+```yaml
+format:
+  html:
+    code-fold: true
+    code-tools: true
+```
+
+![](images/code-tools.png){fig-alt="Capture d'écran du menu ajouté dans un HTML quarto quand code-tools est activé"}
+
+## Découvrir les options ! 
+
+* Guide Quarto: <https://quarto.org/docs/guide/>
+* Pages de référencement des options pour chaque format: <https://quarto.org/docs/reference/>
+
+## Démo 
+
+::: callout
+
+# Générons un PDF
+
+* Pas ou peu de changement dans la `.qmd` utilisé pour produire un HTML.
+:::
+
+::: {.callout-warning}
+
+## Si vous voulez essayer... 
+
+Il faut être configuré pour LaTeX mais
+
+* PDF = LaTeX => Installation de TinyTeX
+* LaTeX = Paquets CTAN => Installation longue
+* Produire un PDF avec LaTeX => Pas si rapide
+
 :::
 
 # 
 
-Allons plus pour produire des documents avec Quarto 
+Allons plus pour produire des contenus plus élaboré avec Quarto 
 
 [[Next]{.button}](/3-documents/)
