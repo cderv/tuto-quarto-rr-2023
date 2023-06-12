@@ -1,5 +1,5 @@
 ---
-title: "Quarto: Késako ?"
+title: "Quarto : Késako ?"
 subtitle: "De R Markdown à Quarto pour aller plus loin avec ses publications"
 institute: "Posit"
 author: "Christophe Dervieux"
@@ -17,7 +17,7 @@ options(width = 65)
 library(countdown)
 ```
 
-# Préparatif
+# Préparatifs
 
 ## Soyez prêt·e ! {.smaller}
 
@@ -33,7 +33,7 @@ library(countdown)
 
 ## Code de Conduite {.smaller}
 
-> Les organisateurs des Rencontres R 2023 s'engagent à offrir une expérience de conférence sans harcèlement pour tous, quel que soit l'âge, le sexe, l'orientation sexuelle, le handicap, l'apparence physique, la race ou la religion (ou son absence).
+> Les organisateur·rice·s des Rencontres R 2023 s'engagent à offrir une expérience de conférence sans harcèlement pour tous, quel que soit l'âge, le sexe, l'orientation sexuelle, le handicap, l'apparence physique, la race ou la religion (ou son absence).
 
 ```{r}
 #| echo: false
@@ -41,10 +41,10 @@ knitr::include_url("https://rr2023.sciencesconf.org/resource/page/id/10#template
 ```
 
 ::: aside
-A consulter sur: <https://rr2023.sciencesconf.org/resource/page/id/10>
+À consulter sur: <https://rr2023.sciencesconf.org/resource/page/id/10>
 :::
 
-## Présent pour vous aider
+## Présents pour vous aider
 
 -   **Instructeur:** Christophe Dervieux
 
@@ -64,7 +64,7 @@ A consulter sur: <https://rr2023.sciencesconf.org/resource/page/id/10>
 Prenez un peu de temps pour voir qui va pouvoir vous aidez à coté de vous!
 :::
 
-{{< fa lightbulb >}} Pour vous aider:
+{{< fa lightbulb >}} Pour vous aider :
 
 * Bonjour, moi c'est ... et toi ? 
 * Depuis combien de temps connaissez vous R / R Markdown ? 
@@ -89,8 +89,8 @@ countdown(seconds = 30)
 
 - Pendant les exercices -- {{< fa hand >}}, mais utilisez aussi les autocollants pour vous signaler :
 
-    - [Rose]{.fg style="--col: pink"} : J'ai besoin d'aide
-    - [Vert]{.fg style="--col: green"} : J'ai terminé
+    - [Rose]{.fg style="--col: pink"} : J'ai besoin d'aide !
+    - [Vert]{.fg style="--col: green"} : J'ai terminé !
 
 ## 
 
@@ -125,7 +125,7 @@ Je vais vous **apprendre**
 ## Quarto ... {.smaller}
 
 - est un nouveau système de publication scientifique et technique Open-Source, basé sur Pandoc,
-- est pensé et construit sur les +10ans d'expérience avec R Markdown,
+- est pensé et construit sur les +10 ans d'expérience avec R Markdown,
 - ne demande pas une technologie particulière pour s'installer et fonctionner.
 
 ![Illustration de la présentation "Hello, Quarto" par Julia Lowndes et Mine Çetinkaya-Rundel, présentée à la conférence RStudio 2022. Illustré par Allison Horst.](images/horst_quarto_schematic.png){fig-alt="Un schéma représentant la polyvalence de Quarto en matière d'entrée multilingue (par exemple Python, R, Observable, Julia) et de sortie multiformat (par exemple PDF, html, documents Word, et plus encore)." fig-align="center"}
@@ -139,7 +139,7 @@ Je vais vous **apprendre**
 
 ## Comme R Markdown alors ? 
 
-Oui construit sur une 10ans de knitr + rmarkdown -> Même principe... 
+Oui construit sur 10 ans de knitr + rmarkdown -> Même principe... 
 
 ![](images/qmd-knitr.jpeg){fig-alt="Un diagramme de la façon dont un .qmd est transformé en formats de sortie via knitr et pandoc"}
 
@@ -175,7 +175,7 @@ Oui construit sur une 10ans de knitr + rmarkdown -> Même principe...
 
 ::: incremental
 - Implémentation cohérente de fonctionnalités pour les différents formats de sorties : tabsets, code-folding, syntax highlighting, etc. 
-- Des valeurs par défaut plus accessibles et une meilleure prise en charge de l'accessibilité
+- Des valeurs par défaut plus accessibles et une meilleure prise en charge de l'accessibilité.
 - Support d'autres langages comme Python, Julia, Observable, et plus encore via le moteur Jupyter pour les chunks de code exécutables.
 - De nouvelles fonctionnalités pour une meilleure expérience: auto-complétion YAML, informations sur les erreurs de syntaxe YAML, etc.
 :::
@@ -184,15 +184,15 @@ Oui construit sur une 10ans de knitr + rmarkdown -> Même principe...
 
 ::: {.callout-important}
 
-# **rmarkdown** ne disparait pas ! 
+# **rmarkdown** ne disparaît pas ! 
 
 L'écosystème R Markdown continue d'exister. Pas de _deprecation_ en vue. 
 :::
 
-![](images/knitting-hedgehog.png){fig-alt='A round hedgehog in a yellow beanie, knitting a teal scarf. Behind them are different outputs from "knitting" documents in R, including PDF, Word, LaTeX, html5, slides, eBooks, dashboards, and websites.'}
+![](images/knitting-hedgehog.png){fig-alt='Un hérisson rond portant un bonnet jaune, tricotant une écharpe bleu canard. Derrière lui il y a différentes sorties issues du rendu de documents dans R, incluant PDF, Word, LaTeX, html5, des diaporamas, des eBooks, des tableaux de bords et sites internets.'}
 
 ::: {.attribution}
-Illustration by Alison Hill and Allison Horst, for RStudio.
+Illustration par Alison Hill and Allison Horst, pour RStudio.
 :::
 
 ## Et plus concrètement ? {.smaller}
@@ -250,7 +250,7 @@ countdown(minutes = 5)
 
 ::: {.callout}
 
-# A faire ensemble
+# À faire ensemble
 
 1. Ouvrir RStudio 
 2. Se placer dans un dossier vierge (ou où vous souhaitez)
