@@ -22,7 +22,7 @@ library(countdown)
 ::: callout
 # Faisons ensemble !
 
-Creer un projet Quarto depuis RStudio et produire un HTML.
+Créer un projet Quarto depuis RStudio et produire un HTML.
 :::
 
 ::: panel-tabset
@@ -102,7 +102,7 @@ quarto render my-favorite.Rmd --to html
 ```
 :::
 
-## A vous !
+## À vous !
 
 ```{r}
 #| echo: false
@@ -112,10 +112,10 @@ countdown(minutes = 2)
 ::: callout
 # Ajoutons au projet
 
-1.  Créer un sous-dossier dans le projet e.g `rapport`
-2.  Y déposer le fichier `.Rmd` d'exercices nommé [`manchots.Rmd`](https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exercises/manchots.Rmd) tel quel
-3.  Produire un HTML avec `quarto preview rapport/manchots.Rmd` dans le Terminal 
-4.  Produire un HTML avec le bouton Render de l'IDE
+1.  Créer un sous-dossier dans le projet e.g `rapport`.
+2.  Y déposer le fichier `.Rmd` d'exercices nommé [`manchots.Rmd`](https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exercises/manchots.Rmd) tel quel.
+3.  Produire un HTML avec `quarto preview rapport/manchots.Rmd` dans le Terminal.
+4.  Produire un HTML avec le bouton Render de l'IDE.
 
 :::
 
@@ -123,7 +123,7 @@ countdown(minutes = 2)
 
 ## Afficher le bouton Render au lieu de Knit pour un Rmd dans un projet Quarto
 
-Retirer `output: html_document` de l'en-tête YAML and sauver le fichier: Le bouton **Render** devrait maintenant apparaître.
+Retirer `output: html_document` de l'en-tête YAML and sauvegarder le fichier : Le bouton **Render** devrait maintenant apparaître.
 :::
 
 # De `.Rmd` à `.qmd`
@@ -167,7 +167,7 @@ ggplot(
 ```{r}
 #| label: bill-dims-species
 #| fig-width: 5
-#| fig-cap: A propos de penguins
+#| fig-cap: À propos de penguins
 ggplot(
   penguins,
   aes(
@@ -200,7 +200,7 @@ Quarto introduit le "hash pipe" dans `#|` - c'est la syntaxe préférée, bien q
 
 ````yaml
 #| fig-width: 5
-#| fig-cap: A propos de penguins
+#| fig-cap: À propos de penguins
 ````
 
 Notez que le YAML pour Quarto suivra une syntaxe de type "mot-mot"
@@ -210,7 +210,7 @@ La différence de syntaxe est due au fait que Quarto est plus étroitement align
 :::
 
 
-## A vous !
+## À vous !
 
 ```{r}
 #| echo: false
@@ -230,7 +230,7 @@ countdown(minutes = 5)
 ::: callout-tip
 ## Nouvelle fonctionnalité Quarto
 
-Tester l'autocompletion et validation YAML dans RStudio IDE [🔗](https://quarto.org/docs/tools/rstudio.html#yaml-intelligence)
+Tester l'autocomplétion et validation YAML dans RStudio IDE [🔗](https://quarto.org/docs/tools/rstudio.html#yaml-intelligence)
 :::
 
 # Quarto unifie R Mardown
@@ -324,7 +324,7 @@ Illustration extrait de la Keynote "Hello, Quarto" de Julia Lowndes et Mine Çet
 Attention à la conversion **distill** à Quarto à cause de conflits d'options ! 
 :::
 
-## A Vous !
+## À Vous !
 
 ```{r}
 #| echo: false
@@ -338,8 +338,8 @@ countdown(minutes = 10)
 * Essayer d'ajouter les fonctionnalités suivantes: 
   * [Article Layout](https://quarto.org/docs/authoring/cross-references.html), 
   * [Cross References](https://quarto.org/docs/authoring/cross-references.html), 
-  * [Callout Blocks](https://quarto.org/docs/authoring/callouts.html)
-* Regarder comment ajouter des mises en pages pour les figures ([Figure computation](https://quarto.org/docs/authoring/figures.html#computations))
+  * [Callout Blocks](https://quarto.org/docs/authoring/callouts.html).
+* Regarder comment ajouter des mises en pages pour les figures ([Figure computation](https://quarto.org/docs/authoring/figures.html#computations)).
 * Et bien plus dans la section [Authoring](https://quarto.org/docs/guide/) du guide Quarto. Curieux des fonctionnalités uniques de Quarto ?
   * [Code Annotation](https://quarto.org/docs/authoring/code-annotation.html)
   * [Diagram](https://quarto.org/docs/authoring/diagrams.html)
@@ -391,7 +391,7 @@ format:
 ---
 ```
 
-## Options Specifiques - Themes HTML {#html-theme auto-animate="true"}
+## Options Specifiques - Thèmes HTML {#html-theme auto-animate="true"}
 
 Le HTML de Quarto est stylisé avec Bootstrap 5 et des valeurs par défaut choisies pour Quarto.
 
@@ -412,7 +412,7 @@ Vous pouvez également utiliser un thème et personnaliser les composants avec S
 :::: {.fragment}
 
 ::: {.callout-note appearance="minimal"}
-Talk sur le sujet plus tard dans la semaine ! 😉
+Présentation sur le sujet plus tard dans la semaine ! 😉
 :::
 
 ::::
@@ -457,6 +457,6 @@ Il faut être configuré pour LaTeX mais
 
 # 
 
-Allons plus pour produire des contenus plus élaboré avec Quarto 
+Allons plus pour produire des contenus plus élaborés avec Quarto 
 
 [[Next]{.button}](/3-documents/)
