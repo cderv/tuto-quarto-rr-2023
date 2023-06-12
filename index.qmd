@@ -14,7 +14,7 @@ Pour ces Rencontres R 2023 à Avignon , un tutoriel de 2h d'introduction à Quar
 🗓️ Mercredi 21 juin / 🕣 10h - 12h / 🏢 Avignon Université - campus Hannah Arendt (salle à préciser)
 :::
 
-# A propos
+# À propos
 
 Ce tutoriel propose de découvrir comment Quarto reprend et repense les fonctionnalités de l'écosystème R Markdown, en passant de plusieurs packages R à un seul et unique outil.
 
@@ -26,12 +26,12 @@ Quarto propose les fonctionnalités de R Markdown remaniées (cross references, 
 
 # Se préparer
 
-{{< fa book >}} [Document à lire](preparatif.qmd) pour être prêt pour le workshop et pouvoir utiliser les exemples et faire les exercises.
+{{< fa book >}} [Document à lire](preparatif.qmd) pour être prêt·e pour le workshop et pouvoir utiliser les exemples et faire les exercises.
 
 # Programme
 
 ::: programme
--    {{< fa dna >}} Quarto: Une évolution de R Markdown ?
+-    {{< fa dna >}} Quarto : Une évolution de R Markdown ?
 
 -   {{< fa recycle >}} Comment passer de R Markdown à Quarto ?
 
