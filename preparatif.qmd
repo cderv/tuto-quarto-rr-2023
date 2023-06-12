@@ -1,6 +1,6 @@
 ---
 title : "Instructions préalables au tutoriel"
-subtitle: Etre prêt pour le jour Jf
+subtitle: Etre prêt pour le jour J
 format: html
 author: ""
 date: ""
@@ -18,7 +18,7 @@ Avant le tutoriel, veuillez suivre les étapes suivantes :
 
 Créez un dossier dédié sur votre environment pour la tutoriel afin d'y stocker les exercices, vos notes et pouvoir faire les exercices dans un environnement sain.
 
-**Ne pas créer de dossier R Studio car nous allons créer différents projets pour les exercies, et des sous-projets RStudio ne fonctionne pas bien**
+**Ne pas créer de dossier R Studio car nous allons créer différents projets pour les exercies, et créer des sous-projets RStudio ne fonctionne pas bien**
 
 Exemple d'organisation: 
 
@@ -32,16 +32,16 @@ Exemple d'organisation:
 ```
 :::
 
-## A connaître (ou réviser) pour être à l'aise
+## À connaître (ou réviser) pour être à l'aise
 
-Hypothèse pour le tutoriel: Vous connaissez R Markdown et vous connaissez la syntax Markdown.
+Hypothèse pour le tutoriel : Vous connaissez R Markdown et vous connaissez la syntax Markdown.
 
 -   La syntaxe Markdown pour Pandoc
-    -   C'est la même que R Markdown: <https://bookdown.org/yihui/rmarkdown/markdown-syntax.html>
+    -   C'est la même que R Markdown : <https://bookdown.org/yihui/rmarkdown/markdown-syntax.html>
 
-    -   Elle est rappelé aussi pour Quarto: <https://quarto.org/docs/authoring/markdown-basics.html>
+    -   Elle est rappelée aussi pour Quarto : <https://quarto.org/docs/authoring/markdown-basics.html>
 
 -   Inclure du code R avec **knitr**
-    -   Les chunks de code R: <https://bookdown.org/yihui/rmarkdown/r-code.html>
+    -   Les chunks de code R : <https://bookdown.org/yihui/rmarkdown/r-code.html>
 
-    -   C\'est quoi un fichier R Markdown en fait: <https://bookdown.org/yihui/rmarkdown-cookbook/rmarkdown-anatomy.html>
+    -   C\'est quoi un fichier R Markdown en fait : <https://bookdown.org/yihui/rmarkdown-cookbook/rmarkdown-anatomy.html>
