@@ -5,9 +5,9 @@ date: ""
 format: html
 ---
 
-## Slides
+## Diapos
 
-{{< fa tv >}} [Ouvrir les slides en plein écran]()
+{{< fa tv >}} [Ouvrir les diapos en plein écran]()
 
 ## Exercices
 
