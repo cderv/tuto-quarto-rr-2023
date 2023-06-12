@@ -22,7 +22,7 @@ website:
     tools:
       - icon: github
         href: https://github.com/cderv/tuto-quarto-rr-2023
-        text: "GitHub Dépot"
+        text: "Dépôt GitHub"
 
     style: docked
     search: true
@@ -31,10 +31,10 @@ website:
       - href: index.qmd
         text: Accueil
       - href: preparatif.qmd
-        text: Préparatif
+        text: Préparatifs
       - text: ---
       - href: 1-quarto-kesako/index.qmd
-        text: "Quarto: Késako ?"
+        text: "Quarto : Késako ?"
       - href: 2-rmd-quarto/index.qmd
         text: "Passer de Rmd à Quarto"
       - href: 3-projets/index.qmd
