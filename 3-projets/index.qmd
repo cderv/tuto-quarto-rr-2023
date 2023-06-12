@@ -5,7 +5,7 @@ author: ""
 date: ""
 ---
 
-## Slides
+## Diapos
 
 {{< fa tv >}} [Ouvrir les slides en plein écran](3-projets.html)
 
