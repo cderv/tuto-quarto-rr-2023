@@ -25,13 +25,13 @@ library(countdown)
 Les projets Quarto sont des **répertoires** qui fournissent :
 
 ::: incremental
-* un moyen de rendre tout ou partie des fichiers d'un répertoire à l'aide d'une seule commande (par exemple, `quarto render myproject`).
+* un moyen de `render` tout ou partie des fichiers d'un répertoire à l'aide d'une seule commande (par exemple, `quarto render myproject`).
 * Un moyen de partager la configuration YAML entre plusieurs documents.
 * La possibilité de rediriger les artefacts de sortie vers un autre répertoire.
 * La possibilité de geler le rendu (c'est-à-dire de ne pas réexécuter les documents à moins qu'ils n'aient changé).
 :::
 
-## Nous avons créés un projet déjà...
+## Nous avons déjà créés un projet...
 
 Un projet, c'est un répertoire avec un `_quarto.yml` aussi simple soit t'il.
 
@@ -70,16 +70,29 @@ format:
 ```
 
 ::: aside
-Exemple: <https://quarto.org>
+Example: <https://quarto.org> and davantage dans la [Gallerie](https://quarto.org/docs/gallery/#websites)
 :::
 
 ## Quarto Blogs
 
-* Hérite des fonctionnalités des sites Quarto (navigation, recherche, etc.)
+:::: columns
 
-* Liste d'article et flux RSS générés automatiquement
+::: column
 
-```{.yaml filename="index.qmd"}
+-   Hérites des fonctionnalités des sites Quarto (navigation, recherche, etc.)
+
+-   Liste et flux RSS générés automatiquement
+
+-   Page d'accueil personnalisable (inspiré du paquet R [postcards](https://github.com/seankross/postcards))
+
+:::
+
+::: aside
+Exemples: <https://quarto.org/docs/blog/> and davantage dans la [Gallerie](https://quarto.org/docs/gallery/#websites)
+:::
+
+::: {.column .make-smaller}
+```{.yaml filename="index.qmd (website with posts/)"}
 ---
 title: "myblog"
 listing:
@@ -89,6 +102,20 @@ listing:
   categories: true
 ---
 ```
+<br> 
+```{.yaml filename="posts/first-post/index.qmd"}
+---
+title: "Post With Code"
+description: "Post description"
+author: "Fizz McPhee"
+date: "5/22/2021"
+categories:
+  - news
+  - code
+---
+```
+:::
+::::
 
 ## {background-image=images/screenshot-blog.png}
 
@@ -134,8 +161,7 @@ format:
 ## Et bien plus de nouveautés...
 
 - [Métadonnées partagées par sous dossier](https://quarto.org/docs/projects/quarto-projects.html#shared-metadata) avec `_metadata.yml`
-- [Exécuter des scripts avant et après `quarto render` (_Project Scripts)](https://quarto.org/docs/projects/scripts.html)
-- [_About Page_ comme le package R **postcard**](https://quarto.org/docs/websites/website-about.html#templates)
+- [Exécuter des scripts avant et après `quarto render` (_Project Scripts_)](https://quarto.org/docs/projects/scripts.html)
 - [Création de listes d'articles personnalisées](https://quarto.org/docs/websites/website-listings-custom.html)
 - ...
 
@@ -148,16 +174,20 @@ countdown(minutes = 10)
 
 ::: {.callout}
 
-# Transformons notre projet en site web
+# Transformez votre projet en site web
 
-1. Ajouter un `index.qmd` dans votre projet existant `Quarto-101`
-2. Modifier le `_quarto.yml` pour faire un site web
-3. Ajouter la navigation pour affichier votre rapport `nouveau-manchots.qmd`
-4. `Render` depuis `index.qmd` et admirer le résultas
+1. Ajoutez un `index.qmd` dans votre projet existant `Quarto-101` 
+2. Modifiez le `_quarto.yml` pour faire un site web
+3. `quarto preview` pour voir votre site web évoluer
+4. Ajoutez la navigation pour afficher votre rapport `nouveau-manchots.qmd` dans un sous-menu de la `navbar`
+5. Personalisez votre site web! 
 :::
 
 ::: callout-tip
-Documentations de Quarto websites pour jouer avec les options: https://quarto.org/docs/websites/
+
+## Apprendre à naviguer dans la doc !
+
+Aidez de vous de la documentation Quarto sur le type `website` pour jouer avec les options: <https://quarto.org/docs/websites/>
 :::
 
 # Questions ?
