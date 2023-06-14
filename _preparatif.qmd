@@ -7,8 +7,11 @@
 - Installez les paquets suivants :
 
     ```r
-    pkg_list <- c("rmarkdown")
+    pkg_list <- c("rmarkdown", "palmerpinguins", "tidyverse", "gt")
+    # Basic
     install.packages(pkg_list)
+    # ou pak
+    pak::pkg_install(pkg_list)
     ```
 
 - Téléchargez `exercises.zip` et décompressez-le sur votre bureau ou à un endroit que vous pouvez facilement le localiser sur votre ordinateur. Ensuite, allez dans RStudio \> File \> New Project \> Existing Directory et naviguez jusqu'au dossier `exercises` dézippé et créez un projet RStudio à l'intérieur et ouvrez-le.
