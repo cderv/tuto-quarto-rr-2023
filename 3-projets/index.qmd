@@ -15,3 +15,10 @@ date: ""
 
 ## Exercices
 
+Si besoin, vous pouvez repartir du rapport `.qmd` d'exemple terminé des exercices précédents
+
+-   <a href="https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exemples-correction/nouveau-manchots-complet-example-corrige.qmd">{{< fa download >}} `nouveau-manchots-complet-example-corrige.qmd`</i></a> à renommer dans votre projet pour l'exercice de cette partie
+
+## Exemple Correction 
+
+-   <a href="https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exemples-correction/quarto-101-website.zip">{{< fa download >}} `quarto-101-website.zip`</i></a> : exemple de site web créé à partir du projet des exercices précédents.

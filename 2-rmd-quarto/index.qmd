@@ -19,8 +19,8 @@ format: html
 -   <a href="https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exercises/manchots.Rmd">{{< fa download >}} `manchots.Rmd`</i></a>
 -   <a href="https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exercises/nouveau-manchots.qmd">{{< fa download >}} `nouveau-manchots.qmd`</i></a>
 
-## Exemple Correction / Démo
+## Exemples Correction / Démo
 
--   <a href="https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exercises/nouveau-manchots-complet-example-corrige.qmd">{{< fa download >}} `nouveau-manchots-complet-example-corrige.qmd`</i></a>
--   <a href="https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exercises/nouveau-manchots-pdf-demo.qmd">{{< fa download >}} `nouveau-manchots-pdf-demo.qmd`</i></a>
--   <a href="https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exercises/nouveau-manchots-pdf-demo-typst.qmd">{{< fa download >}} `nouveau-manchots-pdf-demo-typst.qmd`</i></a>
+-   <a href="https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exemples-correction/nouveau-manchots-complet-example-corrige.qmd">{{< fa download >}} `nouveau-manchots-complet-example-corrige.qmd`</i></a>
+-   <a href="https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exemples-correction/nouveau-manchots-pdf-demo.qmd">{{< fa download >}} `nouveau-manchots-pdf-demo.qmd`</i></a>
+-   <a href="https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exemples-correction/nouveau-manchots-pdf-demo-typst.qmd">{{< fa download >}} `nouveau-manchots-pdf-demo-typst.qmd`</i></a>

@@ -3,6 +3,10 @@ project:
   render: 
     - "*.qmd"
     - "!exercices/"
+    - "!exemples-correction/"
+  resources: 
+    - exercices.zip
+    - exemples-correction.zip
 
 website:
   page-navigation: true
