@@ -1,0 +1,29 @@
+project:
+  type: website
+  render: 
+    - "*.qmd"
+    - "!exercices/"
+    - "!exemples-correction/"
+
+website:
+  repo-url: https://github.com/cderv/tuto-quarto-rr-2023
+  repo-actions: [edit, issue]
+
+  sidebar:
+    contents:
+      - href: index.qmd
+        text: Accueil
+      - href: preparatif.qmd
+        text: Préparatifs
+      - text: ---
+      - href: 1-quarto-kesako/index.qmd
+        text: "Quarto : Késako ?"
+      - href: 2-rmd-quarto/index.qmd
+        text: "Passer de Rmd à Quarto"
+      - href: 3-projets/index.qmd
+        text: Travailler en projet
+      - href: 4-synthese/index.qmd
+        text: Synthèse
+      - href: 5-aller-plus-loin/index.qmd
+        text: Pour aller plus loin...
+

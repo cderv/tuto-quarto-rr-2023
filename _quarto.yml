@@ -1,9 +1,5 @@
 project:
   type: website
-  render: 
-    - "*.qmd"
-    - "!exercices/"
-    - "!exemples-correction/"
   resources: 
     - exercices.zip
     - exemples-correction.zip
@@ -12,9 +8,6 @@ website:
   page-navigation: true
   title: "De R Markdown à Quarto pour aller plus loin avec ses publications"
   description: Rencontres R 2023 tutorial sur Quarto
-
-  repo-url: https://github.com/cderv/tuto-quarto-rr-2023
-  repo-actions: [edit, issue]
 
   open-graph: true
   twitter-card:
@@ -27,26 +20,9 @@ website:
       - icon: github
         href: https://github.com/cderv/tuto-quarto-rr-2023
         text: "Dépôt GitHub"
-
     style: docked
     search: true
     collapse-level: 2
-    contents:
-      - href: index.qmd
-        text: Accueil
-      - href: preparatif.qmd
-        text: Préparatifs
-      - text: ---
-      - href: 1-quarto-kesako/index.qmd
-        text: "Quarto : Késako ?"
-      - href: 2-rmd-quarto/index.qmd
-        text: "Passer de Rmd à Quarto"
-      - href: 3-projets/index.qmd
-        text: Travailler en projet
-      - href: 4-synthese/index.qmd
-        text: Synthèse
-      - href: 5-aller-plus-loin/index.qmd
-        text: Pour aller plus loin...
 
   page-footer:
     right: "Site web construit et publié avec [Quarto](https://quarto.org/)."
@@ -78,3 +54,7 @@ execute:
   freeze: auto
 
 editor: visual
+
+profile: 
+  group: 
+    - [tuto, pretuto]
