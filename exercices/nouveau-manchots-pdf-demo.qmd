@@ -2,14 +2,15 @@
 title: "Une histoire de manchots"
 lang: fr
 date: "2023-06-21"
-format: typst
+format: 
+  html:
+    theme: litera
+  pdf:
+    lot: true
+    lof: true
 toc: true
 code-annotations: hover
 ---
-
-::: callout-important
-Il faut avoir Typst d'installer ! <https://quarto.org/docs/prerelease/1.4/typst.html>
-:::
 
 ## Données
 
@@ -41,11 +42,13 @@ penguins |>
 ```
 
 ```{r}
+#| label: fig-culmen
 #| echo: false
 #| fig-align: center
+#| fig-cap: Illustration de la longueur et de la profondeur du bec des manchots
 #| fig-alt: Illustration de la longueur et de la profondeur du bec des manchots
 #| column: page
-knitr::include_graphics("culmen_depth.png")
+knitr::include_graphics("https://allisonhorst.github.io/palmerpenguins/reference/figures/culmen_depth.png")
 ```
 
 La @fig-species montrent les différences de becs par espèces.
@@ -55,6 +58,7 @@ La @fig-species montrent les différences de becs par espèces.
 #| warning: false
 #| fig-with: 5.0
 #| fig-cap: Catégorisation des espèces selon la taille leur bec
+#| fig-cap-location: margin
 ggplot(
   penguins,
   aes(
@@ -66,12 +70,14 @@ ggplot(
   labs(x = "Longueur du bec (mm)", y = "Profondeur du bec (mm)")
 ```
 
-## manchots
+## Manchots
 
-Le tableau ci-dessous présente les 10 premiers manchots de l'ensemble de données.
+Le tableau ci-dessous @tbl-top10 présente les 10 premiers manchots de l'ensemble de données.
 
 ```{r}
-#| label: top10
+#| label: tbl-top10
+#| tbl-cap: Les 10 premiers éléments du jeu de données
+#| tbl-cap-location: top
 penguins |>
   slice_head(n = 10) |>
   select(species, island, bill_length_mm, bill_depth_mm) |>
