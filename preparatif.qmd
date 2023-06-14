@@ -17,7 +17,9 @@ Avant le tutoriel, veuillez suivre les étapes suivantes :
 
 ## Avant de venir
 
-{{< include _preparatif.qmd >}}
+{{< include _preparatif-config.qmd >}}
+
+{{< include _preparatif-files.qmd >}}
 
 ::: {.callout-tip}
 

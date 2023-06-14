@@ -19,9 +19,9 @@ library(countdown)
 
 # Préparatifs
 
-## Soyez prêt·e ! {.smaller}
+## Soyez prêt·e ! {.smaller .scrollable}
 
-{{< include ../_preparatif.qmd >}}
+{{< include ../_preparatif-config.qmd >}}
 
 # Bienvenue
 
