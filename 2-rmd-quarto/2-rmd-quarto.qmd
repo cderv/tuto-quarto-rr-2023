@@ -40,7 +40,7 @@ $ quarto create project
  ? Directory » quarto-101
 Creating project at C:\Users\chris\AppData\Local\Temp\quarto-101:
   - Created _quarto.yml
-  - Created Quarto-101.qmd
+  - Created quarto-101.qmd
 ```
 :::
 
@@ -48,7 +48,7 @@ Creating project at C:\Users\chris\AppData\Local\Temp\quarto-101:
 
 ``` powershell
 quarto-101
-+¦¦ Quarto-101.qmd
++¦¦ quarto-101.qmd
 L¦¦ _quarto.yml
 ```
 
@@ -58,14 +58,14 @@ L¦¦ _quarto.yml
 ::: column
 ``` {.yaml filename="_quarto.yml"}
 project:
-  title: "Quarto-101"
+  title: "quarto-101"
 ```
 :::
 
 ::: column
-``` {.markdown filename="Quarto-101.qmd"}
+``` {.markdown filename="quarto-101.qmd"}
 ---
-title: "Quarto-101"
+title: "quarto-101"
 ---
 
 ## Quarto
@@ -80,8 +80,8 @@ Quarto enables you to weave together content and executable code into a finished
 ![Nouveau bouton pour transformer son document dans RStudio IDE](images/rstudio-render-quarto.png){fig-alt="Menu de RStudio IDE dans un document .qmd"}
 
 ``` {.bash filename="terminal"}
-quarto render Quarto-101.qmd # defaults to html
-quarto render Quarto-101.qmd --to html
+quarto render quarto-101.qmd # defaults to html
+quarto render quarto-101.qmd --to html
 ```
 
 ## Produire un HTML
@@ -95,7 +95,7 @@ Convertir de `.Rmd` à `.qmd` ?
 :::
 
 ::: fragment
-Pas nécessaire car quarto est compatible!
+Pas nécessaire car Quarto est compatible!
 
 ``` {.bash filename="terminal"}
 quarto render my-favorite.Rmd --to html
@@ -112,7 +112,7 @@ countdown(minutes = 2)
 ::: callout
 # Ajoutons au projet
 
-1.  Créer un sous-dossier dans le projet e.g `rapport`.
+1.  Créer un sous-dossier dans le projet e.g `rapports`.
 2.  Y déposer le fichier `.Rmd` d'exercices nommé [`manchots.Rmd`](https://raw.githubusercontent.com/cderv/tuto-quarto-rr-2023/main/exercises/manchots.Rmd) tel quel.
 3.  Produire un HTML avec `quarto preview rapport/manchots.Rmd` dans le Terminal.
 4.  Produire un HTML avec le bouton Render de l'IDE.
@@ -187,7 +187,7 @@ ggplot(
 ````yaml
 #| label: bill-dims-species
 #| fig-width: 5
-#| fig-cap: A propos de penguins
+#| fig-cap: À propos de penguins
 ````
 
 Quarto introduit le "hash pipe" dans `#|` - c'est la syntaxe préférée, bien que Quarto soit rétrocompatible avec l'ancienne syntaxe R Markdown.
@@ -203,7 +203,7 @@ Quarto introduit le "hash pipe" dans `#|` - c'est la syntaxe préférée, bien q
 #| fig-cap: À propos de penguins
 ````
 
-Notez que le YAML pour Quarto suivra une syntaxe de type "mot-mot"
+Notez que le YAML pour Quarto suivra une syntaxe de type "mot-mot", avec un tiret `-` et non un `.`.
 
 ::: {.callout-note appearance="minimal"}
 La différence de syntaxe est due au fait que Quarto est plus étroitement aligné sur les noms de format et les options de Pandoc (d'où l'utilisation de - comme séparateur de mots au lieu de `_` ou `.`).
@@ -222,10 +222,12 @@ countdown(minutes = 5)
 
 1.  Copier `manchots.Rmd` à `nouveau-manchots.qmd`
 2.  Utiliser `knitr::convert_chunk_header()` sur le fichier .qmd (Regarder l'aide de la fonction)
-3.  Vérifier les configurations des chunks de code (`.` à transformer en `-` par example)
+3.  Vérifier les configurations des chunks de code (`.` à transformer en `-` par example[^1])
 4.  Vérifier l'en-tête YAML du fichier `.qmd`
 5.  Produire un HTML du document au format `.qmd`
 :::
+
+[^1]: Amélioration à faire [yihui/knitr#2262](https://github.com/yihui/knitr/issues/2262)
 
 ::: callout-tip
 ## Nouvelle fonctionnalité Quarto
@@ -337,7 +339,7 @@ countdown(minutes = 10)
 
 * Essayer d'ajouter les fonctionnalités suivantes: 
   * [Article Layout](https://quarto.org/docs/authoring/cross-references.html), 
-  * [Cross References](https://quarto.org/docs/authoring/cross-references.html), 
+  * [Cross References](https://quarto.org/docs/authoring/cross-references.html) (Figures, Tables, ...), 
   * [Callout Blocks](https://quarto.org/docs/authoring/callouts.html).
 * Regarder comment ajouter des mises en pages pour les figures ([Figure computation](https://quarto.org/docs/authoring/figures.html#computations)).
 * Et bien plus dans la section [Authoring](https://quarto.org/docs/guide/) du guide Quarto. Curieux des fonctionnalités uniques de Quarto ?
@@ -371,7 +373,7 @@ format:
 toc: true #<2>
 ```
 1. `lof` = _List Of Figures_
-2. Option commune aux formats HTML et PDF
+2. Exemple d'option commune aux formats HTML et PDF
 
 <br>
 
@@ -379,7 +381,7 @@ toc: true #<2>
 
 ## {background-video="images/quarto-all-formats.mp4" background-video-loop=true background-video-muted=true}
 
-## Options Specifiques - Themes HTML
+## Options Spécifiques - Ex: Themes HTML
 
 Le HTML de Quarto est stylisé avec Bootstrap 5 et des valeurs par défaut choisies pour Quarto.
 
@@ -391,7 +393,7 @@ format:
 ---
 ```
 
-## Options Specifiques - Thèmes HTML {#html-theme auto-animate="true"}
+## Options Spécifiques - Ex: Themes HTML {#html-theme auto-animate="true"}
 
 Le HTML de Quarto est stylisé avec Bootstrap 5 et des valeurs par défaut choisies pour Quarto.
 
@@ -412,13 +414,13 @@ Vous pouvez également utiliser un thème et personnaliser les composants avec S
 :::: {.fragment}
 
 ::: {.callout-note appearance="minimal"}
-Présentation sur le sujet plus tard dans la semaine ! 😉
+Pour en savoir plus sur le sujet: Venez à mon talk ! 😉
 :::
 
 ::::
 :::::
 
-## _Code tools_
+## Options Spécifiques - Ex: _Code tools_
 
 ```yaml
 format:
@@ -431,14 +433,19 @@ format:
 
 ## Découvrir les options ! 
 
-* Guide Quarto: <https://quarto.org/docs/guide/>
-* Pages de référencement des options pour chaque format: <https://quarto.org/docs/reference/>
+- Guide Quarto: <https://quarto.org/docs/guide/>
 
-## Démo 
+-  Pages de référencement des options pour chaque format: <https://quarto.org/docs/reference/>
+
+- Auto-completion YAML: <https://quarto.org/docs/tools/rstudio.html#yaml-intelligence>
+
+## A moi !
+
+### Demo time ! 🕙
 
 ::: callout
 
-# Générons un PDF
+# Produire un PDF
 
 * Pas ou peu de changement dans la `.qmd` utilisé pour produire un HTML.
 :::
@@ -447,16 +454,20 @@ format:
 
 ## Si vous voulez essayer... 
 
-Il faut être configuré pour LaTeX mais
+Il faut être configuré pour LaTeX mais pas très adapté au cadre tuto 
 
 * PDF = LaTeX => Installation de TinyTeX
 * LaTeX = Paquets CTAN => Installation longue
 * Produire un PDF avec LaTeX => Pas si rapide
 
+Ou avoir la dernière pre-release 1.4 pour les nouveautés ! 😉
+
 :::
 
-# 
+# Questions ?
 
-Allons plus pour produire des contenus plus élaborés avec Quarto 
+::: fragment
+Voyons maintenant comment produire des contenus plus élaborés avec Quarto 
 
-[[Next]{.button}](/3-documents/)
+[[Next]{.button}](/3-projets/)
+:::

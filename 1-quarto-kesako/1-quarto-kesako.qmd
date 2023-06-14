@@ -273,9 +273,15 @@ countdown(minutes = 5)
 `simple-document.qmd` est disponible pour [téléchargement](/1-quarto-kesako/#exercices) si besoin
 :::
 
-# 
+# Questions ?
 
-Voyons pour passer de Rmd à Quarto maintenant... 
+::: fragment
+Voyons maintenant pour passer de Rmd à Quarto et produire des documents ... 
 
 [[Next]{.button}](/2-rmd-quarto/)
+:::
+
+
+
+
 

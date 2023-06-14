@@ -160,8 +160,12 @@ countdown(minutes = 10)
 Documentations de Quarto websites pour jouer avec les options: https://quarto.org/docs/websites/
 :::
 
-# 
+# Questions ?
 
+::: fragment
 Passons au récap...
 
-[[Next]{.button}](/3-documents/)
+[[Next]{.button}](/4-synthese/)
+:::
+
+
