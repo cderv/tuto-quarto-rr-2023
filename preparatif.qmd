@@ -6,6 +6,13 @@ author: ""
 date: ""
 ---
 
+::: callout-tip
+
+## Besoin d'aide avant le jour J ?
+
+Christophe sera présent un peu en amont le jour J (avant 10h donc) si jamais vous avez des problèmes à partager en amont du tutoriel
+:::
+
 Avant le tutoriel, veuillez suivre les étapes suivantes :
 
 ## Avant de venir
