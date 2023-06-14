@@ -11,14 +11,15 @@ Quarto est la nouvelle génération de R Markdown pour la publication de documen
 Pour ces Rencontres R 2023 à Avignon , un tutoriel de 2h d'introduction à Quarto est proposé.
 
 ::: when-where
-🗓️ Mercredi 21 juin / 🕣 10h - 12h / 🏢 Avignon Université - campus Hannah Arendt (salle à préciser)
+🗓️ Mercredi 21 juin / 🕣 10h - 12h   
+🏢 Avignon Université - campus Hannah Arendt - Amphi N°6 
 :::
 
 # À propos
 
 Ce tutoriel propose de découvrir comment Quarto reprend et repense les fonctionnalités de l'écosystème R Markdown, en passant de plusieurs packages R à un seul et unique outil.
 
-Quarto propose les fonctionnalités de R Markdown remaniées (cross references, article layout, gestion des figures, \...) ainsi que de multiple formats (document HTML & PDF, site web, présentation HTML, \... ). Tout en ajoutant des nouvelles fonctionnalités pour une meilleure flexibilité et collaboration (modification facile d'un thème HTML, mécanisme d'extensions, projet collaboratif facilité, \...)
+Quarto propose les fonctionnalités de R Markdown remaniées (cross references, article layout, gestion des figures, \...) ainsi que de multiple formats (document HTML & PDF, site web, présentation HTML, \... ), tout en ajoutant des nouvelles fonctionnalités pour une meilleure flexibilité et collaboration (modification facile d'un thème HTML, mécanisme d'extensions, projet collaboratif facilité, \...)
 
 -   Dans quel cas et pourquoi passer de R Markdown à Quarto ?
 -   Comment faire la transition sur des projets existants ?
@@ -44,6 +45,6 @@ Quarto propose les fonctionnalités de R Markdown remaniées (cross references, 
 
 # Instructeur
 
-Christophe Dervieux est développeur Open-Source à Posit PBC sur les projets de l'écosytème de l'écosystème R Markdown, ainsi que sur Quarto.
+Christophe Dervieux est développeur Open-Source à [Posit, PBC](https://posit.co/) sur les projets de l'écosytème R Markdown et Quarto.
 
 ![](https://i.creativecommons.org/l/by/4.0/88x31.png) Ce travail est soumis à la licence [Creative Commons Attribution 4.0 International License](#0).
