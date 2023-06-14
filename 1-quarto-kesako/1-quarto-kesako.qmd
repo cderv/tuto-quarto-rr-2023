@@ -27,9 +27,9 @@ library(countdown)
 
 ## Informations
 
-* {{< fa wifi >}} TODO
-* {{< fa person-running >}} TODO
-* {{< fa restroom >}} TODO
+* {{< fa wifi >}} Infos communiqués par l'organisation
+* {{< fa person-running >}} Repérez bien les sorties de secours ! 
+* {{< fa restroom >}} Les toilettes sont situées en dehors de l'amphi.
 
 ## Code de Conduite {.smaller}
 
@@ -72,25 +72,31 @@ Prenez un peu de temps pour voir qui va pouvoir vous aidez à coté de vous!
 
 ```{r}
 #| echo: false
-countdown(seconds = 30)
+countdown(minutes= 0, seconds = 30)
 ```
 
 ## Comment cela va se passer ?
 
 - Des parties présentations
 
-- Des démo en direct que vous pouvez suivre aussi
+- Des démos en directe que vous pouvez suivre aussi
 
 - Des exercices à faire vous même
 
 ### Obtenir de l'aide
 
-- Pendant les parties non exercices - levez la main {{< fa hand >}}
+- Pendant les parties non exercices, ou dans les transitions - levez la main {{< fa hand >}}
 
 - Pendant les exercices -- {{< fa hand >}}, mais utilisez aussi les autocollants pour vous signaler :
 
     - [Rose]{.fg style="--col: pink"} : J'ai besoin d'aide !
     - [Vert]{.fg style="--col: green"} : J'ai terminé !
+
+::: notes
+
+On peut aussi grouper les questions à la fin des parties. Ou fin de sessions.
+
+:::
 
 ## 
 
@@ -115,7 +121,7 @@ Je vais vous **apprendre**
 
 - Evolution par rapport à R Markdown,
 
-- Comment s'y retrouver.
+- Comment s'y retrouver pour aller plus loin avec Quarto.
 :::
 :::
 :::
@@ -148,6 +154,10 @@ Oui construit sur 10 ans de knitr + rmarkdown -> Même principe...
 ...mais Quarto ouvre aussi de nouveaux horizons!
 
 ![](images/jupyter-alone.jpeg){fig-alt="Un diagramme de la façon dont un .qmd est transformé en formats de sortie via jupyter et pandoc"}
+
+::: notes
+Exemple pour Jupyter et ipynb comme fichier d'entrée
+:::
 
 ## Quarto ... {.center auto-animate="true"}
 
