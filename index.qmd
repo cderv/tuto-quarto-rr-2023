@@ -11,7 +11,7 @@ Quarto est la nouvelle génération de R Markdown pour la publication de documen
 Pour ces Rencontres R 2023 à Avignon , un tutoriel de 2h d'introduction à Quarto est proposé.
 
 ::: when-where
-🗓️ Mercredi 21 juin / 🕣 10h - 12h   
+🗓️ Mercredi 21 juin / 🕙 10h - 12h   
 🏢 Avignon Université - campus Hannah Arendt - Amphi N°6 
 :::
 
