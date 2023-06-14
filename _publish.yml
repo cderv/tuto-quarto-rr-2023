@@ -2,3 +2,6 @@
   netlify:
     - id: 42420560-7017-4506-99df-fd99be7d56d4
       url: 'https://reliable-macaron-af9bcd.netlify.app'
+  quarto-pub:
+    - id: 20a6437c-3e8b-4e30-8c80-94dc48d0123e
+      url: 'https://cderv.quarto.pub/tuto-quarto-rr2023'
