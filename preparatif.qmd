@@ -12,7 +12,9 @@ date: last-modified
 
 Christophe sera présent un peu en amont le jour J (avant 10h donc) si jamais vous avez des problèmes à partager en amont du tutoriel. 
 
-Vous pouvez le contacter avant également: [@cderv](https://github.com/cderv).
+Vous pouvez le contacter avant également: [@cderv](https://github.com/cderv). 
+
+Il est aussi disponible sur [grrr](https://r-grrr.slack.com/) : communauté Slack francophone ouverte à tous, notamment aux débutants. Pour rejoindre les discussions, suivre [le lien d’invitation](https://join.slack.com/t/r-grrr/shared_invite/zt-46utbgb9-uvo_bg5cbuxOV~H10YUX8w)
 :::
 
 Avant le tutoriel, veuillez suivre les étapes suivantes :
