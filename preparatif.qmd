@@ -10,7 +10,9 @@ date: last-modified
 
 ## Besoin d'aide avant le jour J ?
 
-Christophe sera présent un peu en amont le jour J (avant 10h donc) si jamais vous avez des problèmes à partager en amont du tutoriel
+Christophe sera présent un peu en amont le jour J (avant 10h donc) si jamais vous avez des problèmes à partager en amont du tutoriel. 
+
+Vous pouvez le contacter avant également: [@cderv](https://github.com/cderv).
 :::
 
 Avant le tutoriel, veuillez suivre les étapes suivantes :
