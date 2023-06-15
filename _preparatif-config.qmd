@@ -11,7 +11,7 @@ Configuration de votre environment:
 
     ```r
     # Pour les exercices (dplyr et ggplot2 devraient être suffisant si vous ne voulez pas tout le tidyverse)
-    pkg_list <- c("rmarkdown", "palmerpinguins", "gt", "tidyverse") 
+    pkg_list <- c("rmarkdown", "palmerpenguins", "gt", "tidyverse") 
     # R base
     install.packages(pkg_list)
     # ou pak

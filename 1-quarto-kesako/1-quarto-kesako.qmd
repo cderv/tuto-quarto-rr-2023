@@ -44,7 +44,7 @@ knitr::include_url("https://rr2023.sciencesconf.org/resource/page/id/10#template
 À consulter sur: <https://rr2023.sciencesconf.org/resource/page/id/10>
 :::
 
-## Présents pour vous aider
+## Pourquoi vous parlez de Quarto ? 
 
 -   **Instructeur:** Christophe Dervieux
 

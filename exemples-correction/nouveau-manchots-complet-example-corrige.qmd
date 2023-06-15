@@ -86,6 +86,6 @@ penguins |>
 
 ## Pour aller plus loin sur ce jeu de donnée
 
-Consulter la vignette du paquet R **palmerpinguins** disponible sur <https://allisonhorst.github.io/palmerpenguins/>
+Consulter la vignette du paquet R **palmerpenguins** disponible sur <https://allisonhorst.github.io/palmerpenguins/>
 :::
 
