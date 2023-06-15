@@ -3,7 +3,7 @@ title : "Instructions préalables au tutoriel"
 subtitle: Etre prêt pour le jour J
 format: html
 author: ""
-date: ""
+date: last-modified
 ---
 
 ::: callout-tip
@@ -58,3 +58,37 @@ Hypothèse pour le tutoriel : Vous connaissez R Markdown et vous connaissez la s
 
     -   C\'est quoi un fichier R Markdown en fait :  
         <https://bookdown.org/yihui/rmarkdown-cookbook/rmarkdown-anatomy.html>
+
+## Vérifier son setup
+
+Quelques astuces pour vérifier son installation si vous avez installez quarto vous même:
+
+* `quarto check install` doit fonctionner sans erreur 
+  ```powershell
+  $ quarto check install
+
+    [>] Checking Quarto installation......OK
+        Version: 1.4.146
+        Path: C:\Users\chris\scoop\apps\quarto-prerelease\current\bin
+        CodePage: 1252
+
+    [>] Checking basic markdown render....OK
+   ```
+
+* `quarto check knitr` doit fonctonner sans erreur 
+  ```powershell
+  $ quarto check knitr
+
+    (-) Checking R installation...........
+
+    [>] Checking R installation...........OK
+        Version: 4.2.2
+        Path: C:/PROGRA~1/R/R-42~1.2
+        LibPaths:
+            - C:/Users/chris/AppData/Local/R/win-library/4.2
+            - C:/Program Files/R/R-4.2.2/library
+        knitr: 1.43
+        rmarkdown: 2.22
+
+    [>] Checking Knitr engine render......OK
+  ```
