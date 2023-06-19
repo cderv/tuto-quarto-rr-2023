@@ -47,4 +47,4 @@ Quarto propose les fonctionnalités de R Markdown remaniées (cross references, 
 
 Christophe Dervieux est développeur Open-Source à [Posit, PBC](https://posit.co/) sur les projets de l'écosytème R Markdown et Quarto.
 
-![](https://i.creativecommons.org/l/by/4.0/88x31.png) Ce travail est soumis à la licence [Creative Commons Attribution 4.0 International License](#0).
+{{< include _license.qmd >}}

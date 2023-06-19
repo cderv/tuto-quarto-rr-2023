@@ -46,3 +46,9 @@ Si vous préférez avoir les fichiers en local en avance:
   endroit que vous pouvez facilement le localiser sur votre ordinateur.
   Vous pourrez ainsi simplement copier coller au fil du tutoriel les
   fichiers dont vous aurez besoin.
+
+## Licence
+
+![](https://i.creativecommons.org/l/by/4.0/88x31.png) Ce travail est
+soumis à la licence [Creative Commons Attribution 4.0 International
+License](https://creativecommons.org/licenses/by/4.0/).

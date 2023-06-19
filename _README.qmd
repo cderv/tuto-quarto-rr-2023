@@ -11,3 +11,7 @@ Ce dépôt contient le code source du site web utilisé pour les resources au tu
 {{< include _preparatif-config.qmd >}}
 
 {{< include _preparatif-files.qmd >}}
+
+## Licence
+
+{{< include _license.qmd >}}
