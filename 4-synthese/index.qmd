@@ -7,7 +7,9 @@ format: html
 
 ## Diapos
 
-{{< fa tv >}} [Ouvrir les diapos en plein écran]()
+{{< fa tv >}} [Ouvrir les diapos en plein écran](4-synthese.html)
 
-## Exercices
+```{=html}
+<iframe class="slide-deck" src="4-synthese.html" height="420" width="747" style="border: 1px solid #123233;"></iframe>
+```
 

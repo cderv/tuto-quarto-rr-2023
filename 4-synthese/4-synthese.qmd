@@ -1,0 +1,61 @@
+---
+title: "Synthèse"
+subtitle: "De R Markdown à Quarto pour aller plus loin avec ses publications"
+institute: "Posit"
+author: "Christophe Dervieux"
+date: "2023-06-21"
+format: clean-revealjs
+code-line-numbers: false
+editor: visual
+filter:
+  - lightbox
+---
+
+## Quarto, c'est comme R Markdown alors
+
+* Si vous connaissez R Markdown, vous devriez vous y retrouver ! 
+
+* Même principe & Même fondation 
+
+* Quarto = Markdown + résultat d'éxécution + Pandoc
+
+## R Markdown ne disparaît pas
+
+* Un écosytème vaste qui fonctionne avec une communauté active,
+
+* Il y a toujours une équipe de développeur dessus,
+
+* Mais... moins de nouvelles fonctionnalités, avec un focus sur Quarto
+
+
+## Les avantages à changer
+
+* Projets communs avec des utilisateurs Jupyter
+
+* Bénéficier de nouvelles fonctionnalités 
+
+* Envie de changer des formats R Markdown
+
+::: notes 
+J'espere que le tuto a permis de se faire une idée! 
+:::
+
+## Pas besoin de convertir
+
+* Changer au démarrage d'un nouveau projet ! 
+
+* Pas d'intérêt à convertir d'ancien document sauf pour des contenus vivants (blog personnel, site web, ...)
+
+* Rappel : Ce qui marche avec R Markdown continuera de fonctionner !
+
+## Avoir de l'aide
+
+* Quarto Discussions: <https://github.com/quarto-dev/quarto-cli/discussions/>
+
+* Posit Community: <https://community.rstudio.com/>
+
+* Communauté Francophone GRRR <https://r-grrr.slack.com/> ([le lien d’invitation](https://join.slack.com/t/r-grrr/shared_invite/zt-46utbgb9-uvo_bg5cbuxOV~H10YUX8w))
+
+# Merci !
+
+
