@@ -1,11 +1,13 @@
 ---
 title: Tutoriel d'introduction à Quarto - Rencontres R 2023 - Avignon
 format: gfm
-output-file: REAMDE.md
+output-file: README.md
 ---
 
 Ce dépôt contient le code source du site web utilisé pour les resources au tutoriel, disponible à https://cderv.github.io/tuto-quarto-rr-2023/
 
 ## Pour être prêt et faire les exercices
 
-{{< include _preparatif.qmd >}}
+{{< include _preparatif-config.qmd >}}
+
+{{< include _preparatif-files.qmd >}}
