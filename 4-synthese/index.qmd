@@ -1,5 +1,5 @@
 ---
-title: "Travailler avec les projets Quarto "
+title: "Synthèse"
 author: ""
 date: ""
 format: html
