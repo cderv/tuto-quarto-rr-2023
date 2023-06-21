@@ -48,7 +48,7 @@ format:
     theme: [default, ../reveal-style.scss]
     transition: fade
     chalkboard: true
-    footer: "[🔗 cderv.quarto.pub/tuto-quarto-rr-2023]()"
+    footer: "[🔗 cderv.quarto.pub/tuto-quarto-rr2023](https://cderv.quarto.pub/tuto-quarto-rr2023)"
 
 execute:
   freeze: auto
