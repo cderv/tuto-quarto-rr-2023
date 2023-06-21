@@ -27,7 +27,7 @@ library(countdown)
 
 ## Informations
 
-* {{< fa wifi >}} Infos communiqués par l'organisation
+* {{< fa wifi >}} Infos communiquées par l'organisation
 * {{< fa person-running >}} Repérez bien les sorties de secours ! 
 * {{< fa restroom >}} Les toilettes sont situées en dehors de l'amphi.
 
@@ -90,7 +90,7 @@ countdown(minutes= 0, seconds = 30)
 - Pendant les exercices -- {{< fa hand >}}, mais utilisez aussi les autocollants pour vous signaler :
 
     - [Rose]{.fg style="--col: pink"} : J'ai besoin d'aide !
-    - [Vert]{.fg style="--col: green"} : J'ai terminé !
+    - [Bleu]{.fg style="--col: blue"} : J'ai terminé !
 
 ::: notes
 

@@ -79,7 +79,7 @@ Example: <https://quarto.org> and davantage dans la [Gallerie](https://quarto.or
 
 ::: column
 
--   Hérites des fonctionnalités des sites Quarto (navigation, recherche, etc.)
+-   Hérite des fonctionnalités des sites Quarto (navigation, recherche, etc.)
 
 -   Liste et flux RSS générés automatiquement
 
@@ -88,7 +88,8 @@ Example: <https://quarto.org> and davantage dans la [Gallerie](https://quarto.or
 :::
 
 ::: aside
-Exemples: <https://quarto.org/docs/blog/> and davantage dans la [Gallerie](https://quarto.org/docs/gallery/#websites)
+Exemples: <https://quarto.org/docs/blog/> et  
+davantage dans la [Gallerie](https://quarto.org/docs/gallery/#websites)
 :::
 
 ::: {.column .make-smaller}
@@ -180,14 +181,14 @@ countdown(minutes = 10)
 2. Modifiez le `_quarto.yml` pour faire un site web
 3. `quarto preview` pour voir votre site web évoluer
 4. Ajoutez la navigation pour afficher votre rapport `nouveau-manchots.qmd` dans un sous-menu de la `navbar`
-5. Personalisez votre site web! 
+5. Personnalisez votre site web! 
 :::
 
 ::: callout-tip
 
 ## Apprendre à naviguer dans la doc !
 
-Aidez de vous de la documentation Quarto sur le type `website` pour jouer avec les options: <https://quarto.org/docs/websites/>
+Aidez-vous de la documentation Quarto sur le type `website` pour jouer avec les options: <https://quarto.org/docs/websites/>
 :::
 
 # Questions ?

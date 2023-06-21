@@ -176,9 +176,7 @@ ggplot(
   )
 ) +
   geom_point() +
-  scale_color_colorblind() +
-  labs(x = "Bill length (mm)", y = "Bill depth (mm)") +
-  theme_minimal()
+  labs(x = "Bill length (mm)", y = "Bill depth (mm)")
 ```
 ````
 
