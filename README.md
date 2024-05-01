@@ -1,7 +1,7 @@
 # Tutoriel d’introduction à Quarto - Rencontres R 2023 - Avignon
 
 Ce dépôt contient le code source du site web utilisé pour les resources
-au tutoriel, disponible à https://cderv.github.io/tuto-quarto-rr-2023/
+au tutoriel, disponible à https://cderv.quarto.pub/tuto-quarto-rr2023
 
 ## Pour être prêt et faire les exercices
 
